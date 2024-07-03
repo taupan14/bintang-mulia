@@ -15,8 +15,7 @@ function getHtmlEntries() {
 export default defineConfig({
   base: "./",
   build: {
-    // outDir: "design",
-    outDir: "../dist",
+    outDir: "design",
     emptyOutDir: true,
     chunkSizeWarningLimit: 2000,
     rollupOptions: {

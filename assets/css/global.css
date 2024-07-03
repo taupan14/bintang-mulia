@@ -1,0 +1,222 @@
+@import '_button.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply
+        min-w-0
+        min-h-0
+        scroll-pt-[var(--space-header)]
+
+        selection:bg-primary-500
+        selection:text-black
+    }
+
+    @supports selector(::-webkit-scrollbar) {
+        ::-webkit-scrollbar {
+            @apply
+            w-1.5
+            h-1.5
+        }
+        ::-webkit-scrollbar-thumb {
+            @apply
+            bg-dark-600
+        }
+    }
+
+    body {
+        @apply
+        text-sm
+        leading-6
+        text-dark-600
+        bg-dark-50
+    }
+
+    p {
+        @apply
+        mb-4
+        last:mb-0
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        @apply
+        text-dark-900
+        tracking-tight
+        leading-[1.1]
+        font-semibold
+    }
+
+    h1 {
+        @apply
+        text-[clamp(var(--fix-size,theme('fontSize.5xl')),var(--font-size,64)/1440*100vw,var(--font-size,64)/1440*100vw)]
+    }
+    h2 {
+        @apply
+        text-[clamp(var(--fix-size,theme('fontSize.4xl')),var(--font-size,52)/1440*100vw,var(--font-size,52)/1440*100vw)]
+    }
+    h3 {
+        @apply
+        text-[clamp(var(--fix-size,theme('fontSize.4xl')),var(--font-size,42)/1440*100vw,var(--font-size,42)/1440*100vw)]
+    }
+    h4 {
+        @apply
+        text-[clamp(var(--fix-size,theme('fontSize.3xl')),var(--font-size,32)/1440*100vw,var(--font-size,32)/1440*100vw)]
+        leading-[1.15]
+    }
+    h5 {
+        @apply
+        text-[clamp(var(--fix-size,theme('fontSize.2xl')),var(--font-size,22)/1440*100vw,var(--font-size,22)/1440*100vw)]
+        leading-[1.15]
+    }
+    h6 {
+        @apply
+        text-xs
+        leading-4
+        tracking-normal
+    }
+
+    .font-title {
+        @apply
+        -tracking-[0.03em]
+    }
+
+    .icon {
+        @apply
+        inline-flex
+        shrink-0;
+
+        &.icon-stroke > * {
+            @apply
+            stroke-[currentColor]
+        }
+        &.icon-fill > * {
+            @apply
+            fill-[currentColor]
+            transition-colors
+            duration-700
+            ease-custom
+        }
+        &.icon-duo > * {
+            &[fill] {
+                @apply
+                fill-[currentColor]
+            }
+            &[stroke] {
+                @apply
+                stroke-[currentColor]
+            }
+            
+        }
+    }
+
+    [data-hover-effect] {
+        @apply
+        inline-flex
+        whitespace-nowrap;
+
+        span,
+        .icon {
+            @apply
+            transition-[color,transform]
+            duration-700
+            ease-custom
+        }
+        
+        span {
+            @apply
+            inline-flex
+            leading-5
+            [text-shadow:0_2em_0_var(--text-hover,currentColor)]
+        }
+
+        .icon {
+            &.icon-left {
+                @apply
+                drop-shadow-[2em_0_var(--icon-hover,currentColor)]
+            }
+            &.icon-right {
+                @apply
+                drop-shadow-[-2em_0_var(--icon-hover,currentColor)]
+            }
+        }
+
+        &.is-active,
+        &:hover {
+            span {
+                @apply
+                -translate-y-[2em]
+            }
+            .icon {
+                &.icon-left {
+                    @apply
+                    -translate-x-[2em]
+                }
+                &.icon-right {
+                    @apply
+                    translate-x-[2em]
+                }
+            }
+        }
+    }
+
+    .group {
+        &:hover {
+            [data-hover-effect] {
+                span {
+                    @apply
+                    -translate-y-[2em]
+                }
+            }
+        }
+    }
+}
+
+@layer utilities {
+    .link {
+        @apply
+        inline-flex
+        py-0.5
+        relative
+        before:absolute
+        before:inset-x-0
+        before:bottom-0
+        before:h-px
+        before:bg-[var(--line-hover,theme('colors.primary.500'))]
+        before:scale-x-0
+        before:origin-right
+        before:transition-transform
+        before:duration-700
+        before:ease-custom
+        hover:before:scale-x-100
+        hover:before:origin-left
+    }
+
+    .corner-wrapper {
+        @apply
+        absolute
+        inset-0
+        flex
+        flex-col
+        justify-between
+        pointer-events-none;
+
+        .corner-top,
+        .corner-bottom {
+            @apply
+            w-full
+            flex
+            justify-between
+            before:w-1.5
+            before:aspect-square
+            before:shrink-0
+            before:bg-[var(--corner-bg,theme('colors.primary.500'))]
+            after:w-1.5
+            after:aspect-square
+            after:shrink-0
+            after:bg-[var(--corner-bg,theme('colors.primary.500'))]
+        }
+    }
+}

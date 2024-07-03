@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<link rel="preload" href="./assets/fonts/SuisseIntl-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-Book.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Book.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/fonts/fonts.css">
+
+<style>
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        z-index: 9999;
+        background-color: #fff;
+    }
+</style>
+
+</head>
+<body>
+
+<div id="app">
+
+<header id="section-header" class="absolute top-0 inset-x-0 z-50">
+    <nav id="nav-header" class="relative py-4 border-t-4 border-primary-500 bg-dark-50 | lg:py-6">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="flex items-center justify-between">
+                <a href="./" class="inline-flex items-center gap-3">
+                    <img src="./assets/images/logo/logo-icon-bintang-mulia-default.svg" alt="" class="size-10 object-contain shrink-0">
+                    <div class="inline-flex flex-col">
+                        <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase">Bintang Mulia</h5>
+                        <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase">School</h5>
+                    </div>
+                </a>
+                <div class="absolute inset-0 size-min m-auto">
+                    <ul class="flex items-center flex-nowrap whitespace-nowrap gap-12">
+                        <li class="inline-flex">
+                            <a href="#!" class="btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2" data-hover-effect>
+                                About Us
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                            </a>
+                        </li>
+                        <li class="inline-flex">
+                            <a href="#!" class="btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2" data-hover-effect>
+                                Admission
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                            </a>
+                        </li>
+                        <li class="inline-flex">
+                            <a href="#!" class="btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2" data-hover-effect>
+                                Teaching & Learning
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                            </a>
+                        </li>
+                        <li class="inline-flex">
+                            <a href="#!" class="btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')]" data-hover-effect>News & Event</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-center">
+                    <a href="#!" class="btn btn-primary" data-hover-effect>
+                        Contact Us
+                        <svg class="icon icon-stroke circle-icon circle-left icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<section id="section-hero" class="relative pt-[var(--space-header)] mb-8 | lg:mb-16">
+    <div class="relative py-16 z-10 | lg:py-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-7 | 2xl:col-span-8">
+                    <div class="relative">
+                        <div class="inline-flex items-center gap-3 mb-6 | lg:absolute lg:left-0 lg:top-[clamp(1rem,32/1440*100vw,32/1440*100vw)] lg:mb-0">
+                            <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                            <h6 class="uppercase font-semibold leading-none tracking-wide">Welcome</h6>
+                        </div>
+                        <h1 class="font-title font-medium text-balance leading-none [--font-size:128] after:content-['.'] after:text-primary-500 | lg:[--font-size:96] lg:indent-36">Your Pathway to the Future</h1>
+                    </div>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-5 lg:text-end lg:self-end | 2xl:col-span-4">
+                    <article class="text-balance">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem obcaecati nesciunt possimus accusamus amet in voluptatibus necessitatibus tempora rerum ducimus reiciendis debitis tenetur.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="relative px-1.5 | lg:px-3">
+        <div class="relative isolate">
+            <figure id="hero-image" class="relative isolate aspect-[21/9] rounded-[2rem] overflow-clip">
+                <video class="size-full object-cover brightness-90 contrast-125" muted loop autoplay data-parallax>
+                    <source src="./assets/videos/vid01.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+                <div class="absolute inset-0 grid place-items-center">
+                    <button type="button" class="btn btn-icon btn-xl btn-transparent !bg-white/20 text-white [--bg-hover:theme('colors.primary.500')]">
+                        <svg class="icon icon-fill" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.62355 3.35132C4.85479 3.21713 5.13998 3.21617 5.3721 3.34882L19.3721 11.3488C19.6058 11.4824 19.75 11.7309 19.75 12C19.75 12.2691 19.6058 12.5177 19.3721 12.6512L5.3721 20.6512C5.13998 20.7838 4.85479 20.7829 4.62355 20.6487C4.39232 20.5145 4.25 20.2674 4.25 20V4C4.25 3.73265 4.39232 3.48551 4.62355 3.35132Z" fill="#141B34"/>
+                        </svg>
+                    </button>
+                </div>
+            </figure>
+            <!-- <div class="absolute top-0 inset-x-0 flex justify-center -z-[1]">
+                <div class="aspect-video rounded-[100%] w-full max-w-screen-lg bg-primary-500 blur-3xl opacity-40 -translate-y-[20%] | lg:blur-[6rem]"></div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+<section class="py-16 overflow-x-clip | lg:py-20">
+    <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+        <div class="grid gap-8 mb-8 | lg:grid-cols-12 lg:gap-16 lg:mb-16">
+            <div class="grid-item col-span-full text-center | lg:col-span-6 lg:col-start-4">
+                <div class="inline-flex items-center gap-3 mb-8">
+                    <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                    <h6 class="uppercase leading-none tracking-wide">Who We Are</h6>
+                </div>
+                <h2 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-500">We Are Bintang Mulia School</h2>
+            </div>
+        </div>
+        <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+            <div class="grid-item col-span-full | lg:col-span-6">
+                <div class="flex flex-col items-center text-center gap-8 mb-8 | lg:mb-16">
+                    <article class="text-balance | lg:px-16">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quia, iusto deleniti error magni aperiam nulla, aliquid accusantium beatae excepturi fuga molestias in explicabo? Sint aut corporis nostrum modi nisi, explicabo vero?</p>
+                    </article>
+                    <a href="#!" class="btn btn-primary" data-hover-effect>
+                        Learn More
+                        <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+                <figure class="aspect-video rounded-3xl overflow-clip">
+                    <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover" data-parallax data-u-scale="1.15">
+                </figure>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3 lg:-order-1">
+                <figure class="aspect-[3/4] rounded-3xl overflow-clip | lg:-translate-y-[20%]">
+                    <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover" data-parallax data-u-scale="1.15">
+                </figure>
+            </div>
+            <div class="grid-item col-span-full relative | lg:col-span-3 lg:col-start-10">
+                <figure class="aspect-[3/4] rounded-3xl overflow-clip | lg:-translate-y-[20%]">
+                    <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover" data-parallax data-u-scale="1.15">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 overflow-x-clip | lg:py-20">
+    <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+        <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+            <div class="grid-item col-span-full | md:col-span-6 | lg:col-span-3">
+                <div class="flex flex-col gap-4">
+                    <h5 class="font-title font-medium text-balance leading-none pb-4 border-b border-dark-900/20 text-primary-500">Active Students</h5>
+                    <h2 class="font-semibold tracking-tighter">12.000</h2>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nesciunt aperiam. Nemo illum alias nihil expedita?</p>
+                    </article>
+                </div>
+            </div>
+            <div class="grid-item col-span-full | md:col-span-6 | lg:col-span-3">
+                <div class="flex flex-col gap-4">
+                    <h5 class="font-title font-medium text-balance leading-none pb-4 border-b border-dark-900/20 text-primary-500">Certified Teachers</h5>
+                    <h2 class="font-semibold tracking-tighter">512</h2>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nesciunt aperiam. Nemo illum alias nihil expedita?</p>
+                    </article>
+                </div>
+            </div>
+            <div class="grid-item col-span-full | md:col-span-6 | lg:col-span-3">
+                <div class="flex flex-col gap-4">
+                    <h5 class="font-title font-medium text-balance leading-none pb-4 border-b border-dark-900/20 text-primary-500">National Awards</h5>
+                    <h2 class="font-semibold tracking-tighter">168</h2>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nesciunt aperiam. Nemo illum alias nihil expedita?</p>
+                    </article>
+                </div>
+            </div>
+            <div class="grid-item col-span-full | md:col-span-6 | lg:col-span-3">
+                <div class="flex flex-col gap-4">
+                    <h5 class="font-title font-medium text-balance leading-none pb-4 border-b border-dark-900/20 text-primary-500">Graduates</h5>
+                    <h2 class="font-semibold tracking-tighter">28.987</h2>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, nesciunt aperiam. Nemo illum alias nihil expedita?</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="grid gap-8">
+            <div class="splide group/slide" data-slide-facilities data-splide='{"autoScroll":{"speed":1}}'>
+                <div class="splide__track overflow-visible">
+                    <div class="splide__list">
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Classrooms</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Playground</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Library</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Gymnasium</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Science Laboratory</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Computer Lab</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Cafeteria</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Auditorium</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Medical Room</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Music Room</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Sports Fields</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Special Education Rooms</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Restrooms</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="splide group/slide" data-slide-facilities data-splide='{"autoScroll":{"speed":-1}}'>
+                <div class="splide__track overflow-visible">
+                    <div class="splide__list">
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Classrooms</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Playground</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Library</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Gymnasium</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Science Laboratory</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Computer Lab</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Cafeteria</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Auditorium</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Medical Room</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Music Room</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Sports Fields</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Special Education Rooms</h4>
+                            </a>
+                        </div>
+                        <div class="splide__slide w-auto">
+                            <a href="#!" class="inline-flex items-center gap-3 group">
+                                <div class="-mt-1 relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400"></div>
+                                <h4 class="font-title font-medium text-balance leading-none text-primary-500 transition-colors duration-700 ease-custom group-hover:text-dark-900">Restrooms</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</section>
+
+<section class="relative px-1.5 pt-8 | lg:px-3 lg:pt-16">
+    <div class="relative isolate pt-16 pb-4 bg-primary-950 rounded-t-3xl | lg:pt-28 lg:pb-8">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-6 mb-16 | lg:grid-cols-12 lg:gap-16 lg:mb-24">
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <div class="inline-flex items-center gap-3 mb-8">
+                        <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                        <h6 class="uppercase leading-none tracking-wide text-white">Academic Overview</h6>
+                    </div>  
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h5 class="font-title font-medium text-balance text-white after:content-['.'] after:text-primary-500">The requirement for academic achievement</h5>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4 lg:text-end">
+                    <article class="text-white/70 text-balance">
+                        <p>Bintang Mulia School will prepare and educate the students based on Christ-centered and Biblical Christian Worldview perspective, viewing them as God’s image and likeness.</p>
+                    </article>
+                </div>
+            </div>
+            <div class="relative isolate">
+                <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                    <div class="grid-item col-span-full | lg:col-span-8 lg:col-start-5">
+                        <div class="grid divide-y divide-white/20 group/list">
+                            <div class="pt-4 pb-8 first:pt-0 last:pb-0 group/item | lg:pt-6 lg:pb-12" data-hover-image>
+                                <a href="#!" class="flex items-center">
+                                    <div class="grow flex flex-col gap-4 transition-all duration-700 ease-custom group-hover/item:pl-8 | lg:gap-6">
+                                        <h5 class="text-sm tracking-normal text-primary-500">Junior school (K1-3)</h5>
+                                        <h1 class="font-title font-medium text-balance leading-none text-white transition-colors duration-700 ease-custom group-hover/list:text-white/40 group-hover/item:!text-white after:content-['.'] after:text-primary-500">Kindergarten</h1>
+                                    </div>
+                                </a>
+                                <div class="fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none" data-image>
+                                    <div class="aspect-square w-[calc(theme('screens.2xl')/5-1rem)] rounded-3xl overflow-clip">
+                                        <figure class="size-full rounded-3xl overflow-clip translate-y-full transition-transform duration-700 ease-custom [.is-show_&]:translate-y-0">
+                                            <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4 pb-8 first:pt-0 last:pb-0 group/item | lg:pt-6 lg:pb-12" data-hover-image>
+                                <a href="#!" class="flex items-center">
+                                    <div class="grow flex flex-col gap-4 transition-all duration-700 ease-custom group-hover/item:pl-8 | lg:gap-6">
+                                        <h5 class="text-sm tracking-normal text-primary-500">Junior school (G1-6)</h5>
+                                        <h1 class="font-title font-medium text-balance leading-none text-white transition-colors duration-700 ease-custom group-hover/list:text-white/40 group-hover/item:!text-white after:content-['.'] after:text-primary-500">Primary School</h1>
+                                    </div>
+                                </a>
+                                <div class="fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none" data-image>
+                                    <div class="aspect-square w-[calc(theme('screens.2xl')/5-1rem)] rounded-3xl overflow-clip">
+                                        <figure class="size-full rounded-3xl overflow-clip translate-y-full transition-transform duration-700 ease-custom [.is-show_&]:translate-y-0">
+                                            <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4 pb-8 first:pt-0 last:pb-0 group/item | lg:pt-6 lg:pb-12" data-hover-image>
+                                <a href="#!" class="flex items-center">
+                                    <div class="grow flex flex-col gap-4 transition-all duration-700 ease-custom group-hover/item:pl-8 | lg:gap-6">
+                                        <h5 class="text-sm tracking-normal text-primary-500">Senior school (G7-9)</h5>
+                                        <h1 class="font-title font-medium text-balance leading-none text-white transition-colors duration-700 ease-custom group-hover/list:text-white/40 group-hover/item:!text-white after:content-['.'] after:text-primary-500">Junior High</h1>
+                                    </div>
+                                </a>
+                                <div class="fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none" data-image>
+                                    <div class="aspect-square w-[calc(theme('screens.2xl')/5-1rem)] rounded-3xl overflow-clip">
+                                        <figure class="size-full rounded-3xl overflow-clip translate-y-full transition-transform duration-700 ease-custom [.is-show_&]:translate-y-0">
+                                            <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4 pb-8 first:pt-0 last:pb-0 group/item | lg:pt-6 lg:pb-12" data-hover-image>
+                                <a href="#!" class="flex items-center">
+                                    <div class="grow flex flex-col gap-4 transition-all duration-700 ease-custom group-hover/item:pl-8 | lg:gap-6">
+                                        <h5 class="text-sm tracking-normal text-primary-500">Senior school (G10-12)</h5>
+                                        <h1 class="font-title font-medium text-balance leading-none text-white transition-colors duration-700 ease-custom group-hover/list:text-white/40 group-hover/item:!text-white after:content-['.'] after:text-primary-500">Senior Hight</h1>
+                                    </div>
+                                </a>
+                                <div class="fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none" data-image>
+                                    <div class="aspect-square w-[calc(theme('screens.2xl')/5-1rem)] rounded-3xl overflow-clip">
+                                        <figure class="size-full rounded-3xl overflow-clip translate-y-full transition-transform duration-700 ease-custom [.is-show_&]:translate-y-0">
+                                            <img src="./assets/images/thumbnails/img04.webp" alt="" class="size-full object-cover">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4 pb-8 first:pt-0 last:pb-0 group/item | lg:pt-6 lg:pb-12" data-hover-image>
+                                <a href="#!" class="flex items-center">
+                                    <div class="grow flex flex-col gap-4 transition-all duration-700 ease-custom group-hover/item:pl-8 | lg:gap-6">
+                                        <h5 class="text-sm tracking-normal text-primary-500">Activities</h5>
+                                        <h1 class="font-title font-medium text-balance leading-none text-white transition-colors duration-700 ease-custom group-hover/list:text-white/40 group-hover/item:!text-white after:content-['.'] after:text-primary-500">After School</h1>
+                                    </div>
+                                </a>
+                                <div class="fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none" data-image>
+                                    <div class="aspect-square w-[calc(theme('screens.2xl')/5-1rem)] rounded-3xl overflow-clip">
+                                        <figure class="size-full rounded-3xl overflow-clip translate-y-full transition-transform duration-700 ease-custom [.is-show_&]:translate-y-0">
+                                            <img src="./assets/images/thumbnails/img05.webp" alt="" class="size-full object-cover">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex flex-col justify-end inset-x-0 top-0 -z-[1] -bottom-28 mix-blend-multiply">
+                    <div class="w-full max-w-screen-2xl mx-auto px-3 sticky bottom-0 | lg:px-12 | 2xl:px-0">
+                        <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                            <div class="grid-item col-span-full | lg:col-span-3">
+                                <div class="flex flex-col gap-4">
+                                    <figure class="relative isolate aspect-[3/4] [mask-image:linear-gradient(to_bottom,black,transparent)] shrink-0">
+                                        <img src="./assets/images/student.webp" alt="" class="size-full object-contain object-bottom grayscale">
+                                    </figure>
+                                    <!-- <div class="flex flex-col gap-1 items-center text-center">
+                                        <h5 class="text-base text-white | lg:text-lg">Gloria E. Baquero Lleras, Ph.D.</h5>
+                                        <h5 class="text-sm tracking-normal text-primary-500">Headmaster</h5>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="relative py-16 before:absolute before:inset-x-0 before:top-0 before:bottom-1/2 before:bg-primary-950 before:rounded-b-3xl before:-z-[1] | lg:py-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <figure class="relative aspect-[21/8] rounded-3xl overflow-clip">
+                <img src="./assets/images/thumbnails/img06.webp" alt="" class="size-full object-cover brightness-90 contrast-125" data-parallax data-u-scale="1.15">
+                <a href="javascript:;" class="absolute inset-0 flex flex-col justify-between bg-gradient-to-b from-dark-900/30 to-dark-900/60 group">
+                    <div class="p-6 flex justify-end | lg:p-12">
+                        <div class="inline-flex items-center gap-4">
+                            <div class="btn btn-transparent p-0 text-white" data-hover-effect>Play Video</div>
+                            <div class="btn btn-icon btn-lg btn-primary" data-hover-effect>
+                                <svg class="icon icon-fill" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.62355 3.35132C4.85479 3.21713 5.13998 3.21617 5.3721 3.34882L19.3721 11.3488C19.6058 11.4824 19.75 11.7309 19.75 12C19.75 12.2691 19.6058 12.5177 19.3721 12.6512L5.3721 20.6512C5.13998 20.7838 4.85479 20.7829 4.62355 20.6487C4.39232 20.5145 4.25 20.2674 4.25 20V4C4.25 3.73265 4.39232 3.48551 4.62355 3.35132Z" fill="#141B34"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 | lg:p-12">
+                        <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                            <div class="grid-item col-span-full | lg:col-span-5">
+                                <div class="inline-flex items-center gap-3 mb-8">
+                                    <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                                    <h6 class="uppercase leading-none tracking-wide text-white">Headmaster's Speech</h6>
+                                </div>
+                                <h4 class="font-title font-medium text-balance text-white after:content-['.'] after:text-primary-500">Greetings from the Headmaster of Bintang Mulia School</h4>
+                            </div>
+                            <div class="grid-item col-span-full | lg:col-span-6 lg:col-start-9 lg:text-end lg:self-end">
+                                <div class="inline-flex items-center gap-4">
+                                    <div class="flex flex-col gap-1">
+                                        <h5 class="text-sm text-white">Gloria E. Baquero Lleras, Ph.D.</h5>
+                                        <h6 class="text-white/60">Headmaster</h6>
+                                    </div>
+                                    <div class="w-16 aspect-square rounded-full bg-primary-500 overflow-clip">
+                                        <img src="./assets/images/avatar01.webp" alt="" class="size-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 | lg:py-20">
+    <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+        <div class="grid gap-8 mb-8 | lg:grid-cols-12 lg:gap-16 lg:mb-16">
+            <div class="grid-item col-span-full text-center | lg:col-span-6 lg:col-start-4">
+                <div class="inline-flex items-center gap-3 mb-8">
+                    <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                    <h6 class="uppercase leading-none tracking-wide">News & Events</h6>
+                </div>
+                <h2 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-500">The latest from our Bintang Mulia School</h2>
+            </div>
+        </div>
+        <div class="grid gap-4 | lg:grid-cols-12 lg:gap-y-6">
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="#!" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="#!" class="p-4 flex flex-col gap-4 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                    </a>
+                </article>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="#!" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="#!" class="p-4 flex flex-col gap-4 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                    </a>
+                </article>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="#!" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="#!" class="p-4 flex flex-col gap-4 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                    </a>
+                </article>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img04.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="#!" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="#!" class="p-4 flex flex-col gap-4 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                    </a>
+                </article>
+            </div>
+        </div>
+        <div class="flex justify-center mt-12">
+            <a href="#!" class="btn" data-hover-effect>See More News</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer id="sectioon-footer" class="px-1.5 pb-1.5 | lg:px-3 lg:pb-3">
+    <section id="footer-register" class="relative pb-16 pt-8 | lg:pb-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="relative | lg:pt-24">
+                <div class="relative isolate bg-primary-500 rounded-3xl overflow-clip p-8 | lg:p-16 | 2xl:p-20">
+                    <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                        <div class="grid-item col-span-full text-center | lg:col-span-7 lg:text-start">
+                            <div class="inline-flex items-center gap-3 mb-8">
+                                <div class="w-1.5 aspect-square bg-primary-950 rounded-full shrink-0"></div>
+                                <h6 class="uppercase leading-none tracking-wide text-white">Be a part of our lifelong</h6>
+                            </div>
+                            <h2 class="font-title font-medium text-balance leading-none text-white after:content-['.'] after:text-primary-950">Transformative Learning Community Today</h2>
+                        </div>
+                        <div class="grid-item col-span-full | lg:col-span-6 lg:row-start-2">
+                            <a href="#!" class="btn btn-white" data-hover-effect>
+                                Online Registration
+                                <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 right-0 -z-[1]">
+                        <div class="aspect-square rounded-full border border-white/50 w-[calc(22rem+22vw)] translate-x-1/4 translate-y-1/2"></div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 left-[55%] pointer-events-none">
+                    <figure class="size-full">
+                        <img src="./assets/images/online-registration.webp" alt="" class="size-full object-contain">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 top-1/2 bottom-0 bg-primary-950 rounded-t-3xl -z-[1]"></div>
+    </section>
+    <section id="footer-top" class="pb-20 pt-8 bg-primary-950 | lg:pb-24">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <a href="./" class="inline-flex items-center gap-3">
+                        <img src="./assets/images/logo/logo-icon-bintang-mulia-default.svg" alt="" class="size-10 object-contain shrink-0">
+                        <div class="inline-flex flex-col">
+                            <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase text-white">Bintang Mulia</h5>
+                            <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase text-white">School</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <!-- <h5 class="font-title font-medium text-balance text-white after:content-['.'] after:text-primary-500 mb-4">About Us</h5> -->
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-6">About Us</h6>
+                    <ul class="flex flex-col">
+                        <li class="inline-flex"><a class="link text-white" href="#!">About Us</a></li>
+                        <li class="inline-flex"><a class="link text-white" href="#!">Our Network</a></li>
+                        <li class="inline-flex"><a class="link text-white" href="#!">Our Campuses</a></li>
+                        <li class="inline-flex"><a class="link text-white" href="#!">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-6">Teaching & Learning</h6>
+                    <ul class="flex flex-col">
+                        <li class="inline-flex"><a class="link text-white" href="#!">Academic Overview</a></li>
+                        <li class="inline-flex"><a class="link text-white" href="#!">Kindergarten</a></li>
+                        <li class="inline-flex"><a class="link text-white" href="#!">Primary School</a></li>
+                        <li class="inline-flex"><a class="link text-white" href="#!">Junior School</a></li>
+                        <li class="inline-flex"><a class="link text-white" href="#!">Senior School</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-6">Head Office</h6>
+                    <address class="not-italic text-white/60 text-balance">
+                        Jalan Mentawai No. 201 Taman Imam Bonjol, Lippo Village Tangerang, 15139, Indonesia
+                    </address>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-6">Contact Us</h6>
+                    <ul class="flex flex-col">
+                        <li class="inline-flex"><a class="link text-white" href="#!">info@bintangmulia.com</a></li>
+                        <li class="inline-flex"><a class="link text-white" href="#!">+62 822 1234 5678</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-6">Follow Us</h6>
+                    <ul class="flex flex-col">
+                        <li class="inline-flex"><a class="link text-white" href="#!">Facebook</a></li>
+                        <li class="inline-flex"><a class="link text-white" href="#!">Instagram</a></li>
+                        <li class="inline-flex"><a class="link text-white" href="#!">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer-bottom" class="pb-8 bg-primary-950 rounded-b-3xl overflow-clip">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="splide group/slide pointer-events-none mb-8 | lg:mb-16" data-slide-footer>
+                <div class="splide__track overflow-visible">
+                    <div class="splide__list">
+                        <div class="splide__slide">
+                            <h1 class="font-title font-medium text-balance leading-none [--font-size:125] text-white after:content-['.'] after:text-primary-500 | lg:[--font-size:86] whitespace-nowrap">Bintang Mulia School</h1>
+                        </div>
+                        <div class="splide__slide">
+                            <h1 class="font-title font-medium text-balance leading-none [--font-size:125] text-white after:content-['.'] after:text-primary-500 | lg:[--font-size:86] whitespace-nowrap">Bintang Mulia School</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h6 id="footer-copyright" class="uppercase leading-none tracking-wide text-white/60 text-center">Copyright © 2024 Bintang Mulia School. All Rights Reserved</h6>
+        </div>
+    </section>
+</footer>
+
+<!-- <div id="modal-adds" class="fixed top-0 inset-x-0 z-[999] hidden" data-modal data-auto-modal>
+    <div class="relative w-full h-dvh flex flex-col overflow-auto pointer-events-none" data-lenis-prevent>
+        <div class="py-12 shrink-0 my-auto">
+            <div class="max-w-screen-2xl mx-auto px-2 lg:px-8 xl:px-8 2xl:px-0">
+                <figure class="relative rounded-lg overflow-clip pointer-events-auto max-w-screen-sm mx-auto" data-modal-content>
+                    <div class="absolute top-0 right-0 p-1">
+                        <button type="button" class="btn btn-icon btn-sm btn-dark" data-hover-effect data-modal-hide>
+                            <svg class="icon icon-stroke" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.0002 4.99994L5.00021 18.9999M5.00021 4.99994L19.0002 18.9999" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="#!">
+                        <img src="./assets/images/thumbnails/announcement.webp" loading="eager" alt="" class="w-full object-cover">
+                    </a>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="preloader"></div>
+
+</div><!--app-->
+
+<script type="module" src="/main.js"></script>
+
+</body>
+</html>

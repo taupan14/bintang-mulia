@@ -16,3 +16,29 @@ function raf(time) {
     requestAnimationFrame(raf)
 }
 requestAnimationFrame(raf)
+
+document.querySelectorAll('.nav-header-menu').forEach((navHeaderMenu) => {
+    navHeaderMenu.addEventListener('mouseenter', () => {
+        lenis.stop()
+    })
+    navHeaderMenu.addEventListener('mouseleave', () => {
+        lenis.start()
+    })
+})
+
+function setupScrollAnchor() {
+    document.querySelectorAll('[data-scroll-to]').forEach((scrollToEl) => {
+        const scrollToId = scrollToEl.getAttribute('data-scroll-to')
+        const targetElement = document.getElementById(scrollToId)
+
+        scrollToEl.addEventListener('click', () => {
+            lenis.scrollTo(targetElement)
+        })
+    })
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        setupScrollAnchor()
+    }, 500)
+})

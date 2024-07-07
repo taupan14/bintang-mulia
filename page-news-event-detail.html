@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<link rel="preload" href="./assets/fonts/SuisseIntl-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-Book.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Book.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/fonts/fonts.css">
+
+<style>
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        z-index: 9999;
+        background-color: #fff;
+    }
+</style>
+
+</head>
+<body>
+
+<div id="app">
+
+<header id="section-header" class="fixed top-0 inset-x-0 z-50">
+    <nav id="nav-header" class="relative isolate py-4 border-t-4 border-primary-500 bg-dark-50 | lg:py-6">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="flex items-center justify-between">
+                <a href="./" class="relative inline-flex items-center gap-3 z-10">
+                    <div class="relative w-10 aspect-square shrink-0">
+                        <img src="./assets/images/logo/logo-icon-bintang-mulia-default.svg" alt="" class="absolute inset-0 object-contain transition-opacity duration-700 ease-custom[.is-hover-menu_&]:opacity-0">
+                        <img src="./assets/images/logo/logo-icon-bintang-mulia-white.svg" alt="" class="absolute inset-0 object-contain opacity-0 transition-opacity duration-700 ease-custom [.is-hover-menu_&]:opacity-100">
+                    </div>
+                    <div class="inline-flex flex-col">
+                        <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase transition-colors duration-700 ease-custom [.is-hover-menu_&]:text-white">Bintang Mulia</h5>
+                        <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase transition-colors duration-700 ease-custom [.is-hover-menu_&]:text-white">School</h5>
+                    </div>
+                </a>
+                <div class="absolute inset-0 grid place-items-center">
+                    <ul class="flex items-center flex-nowrap whitespace-nowrap gap-12">
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                About Us
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
+                            </a>
+                            <div class="nav-header-wrapper absolute top-0 inset-x-0">
+                                <div class="nav-header-submenu relative isolate bg-primary-500 pt-[var(--space-header)]">
+                                    <div class="py-16 | lg:py-20">
+                                        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+                                            <div class="nav-menu-content grid gap-8 whitespace-normal | lg:grid-cols-12 lg:gap-x-16">
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:pr-16">
+                                                    <h4 class="font-title font-medium text-balance leading-none text-primary-950">About Us</h4>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2 lg:pr-16 | 2xl:pr-24">
+                                                    <article class="text-white text-balance">
+                                                        <p>Find out more about us, from identity and ownership structure, to products, services and business lines.</p>
+                                                    </article>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
+                                                    <ul class="grid grid-cols-2 gap-1 group/menu">
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">About Us</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Our Network</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Our Campuses</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Gallery</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-y-0 right-0 left-1/2 -z-[1] mix-blend-multiply opacity-50">
+                                        <figure class="size-full [mask-image:linear-gradient(to_right,transparent,black)]">
+                                            <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover grayscale">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Admission
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
+                            </a>
+                            <div class="nav-header-wrapper absolute top-0 inset-x-0">
+                                <div class="nav-header-submenu relative isolate bg-primary-500 pt-[var(--space-header)]">
+                                    <div class="py-16 | lg:py-20">
+                                        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+                                            <div class="nav-menu-content grid gap-8 whitespace-normal | lg:grid-cols-12 lg:gap-x-16">
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:pr-16">
+                                                    <h4 class="font-title font-medium text-balance leading-none text-primary-950">Admission</h4>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2 lg:pr-16 | 2xl:pr-24">
+                                                    <article class="text-white text-balance">
+                                                        <p>Find out more about us, from identity and ownership structure, to products, services and business lines.</p>
+                                                    </article>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
+                                                    <ul class="grid grid-cols-2 gap-1 group/menu">
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Registration Process</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Test Information</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Registration Guide</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Visit Bintang Mulia</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-y-0 right-0 left-1/2 -z-[1] mix-blend-multiply opacity-50">
+                                        <figure class="size-full [mask-image:linear-gradient(to_right,transparent,black)]">
+                                            <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover grayscale">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Teaching & Learning
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
+                            </a>
+                            <div class="nav-header-wrapper absolute top-0 inset-x-0">
+                                <div class="nav-header-submenu relative isolate bg-primary-500 pt-[var(--space-header)]">
+                                    <div class="py-16 | lg:py-20">
+                                        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+                                            <div class="nav-menu-content grid gap-8 whitespace-normal | lg:grid-cols-12 lg:gap-x-16">
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:pr-16">
+                                                    <h4 class="font-title font-medium text-balance leading-none text-primary-950">Teaching & Learning</h4>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2 lg:pr-16 | 2xl:pr-24">
+                                                    <article class="text-white text-balance">
+                                                        <p>Find out more about us, from identity and ownership structure, to products, services and business lines.</p>
+                                                    </article>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
+                                                    <ul class="grid grid-cols-2 gap-1 group/menu">
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Academic Overview</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Kindergarten</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Primary School</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Junior School</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Senior School</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Elective Class</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-y-0 right-0 left-1/2 -z-[1] mix-blend-multiply opacity-50">
+                                        <figure class="size-full [mask-image:linear-gradient(to_right,transparent,black)]">
+                                            <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover grayscale">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="page-news-event.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                News & Event
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative flex items-center z-10">
+                    <a href="page-contact-us.html" class="btn btn-primary [.is-hover-menu_&]:btn-white" data-hover-effect>
+                        Contact Us
+                        <svg class="icon icon-stroke circle-icon circle-left icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="backdrop" class="absolute top-0 left-0 w-screen h-dvh backdrop-blur-md bg-primary-950/30 -z-[2] pointer-events-none"></div>
+    </nav>
+</header>
+
+<main>
+
+<section id="page-header" class="relative pt-[var(--space-header)]">
+    <div class="pt-16 pb-8 | lg:pt-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-8">
+                    <div class="inline-flex items-center gap-3 mb-8">
+                        <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                        <h6 class="uppercase leading-none tracking-wide">News & Events</h6>
+                    </div>
+                    <h3 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-500">Unveiling the Shopify Success Story: A Statistical Analysis of a Global E-Commerce Giant</h3>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2">
+                    <div class="flex flex-col gap-2">
+                        <h6 class="text-dark-400">Posted By</h6>
+                        <h5 class="text-sm leading-none text-balance line-clamp-2 font-bold">Admin</h5>
+                    </div>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2">
+                    <div class="flex flex-col gap-2">
+                        <h6 class="text-dark-400">Published</h6>
+                        <h5 class="text-sm leading-none text-balance line-clamp-2 font-bold">April 05, 2024</h5>
+                    </div>
+                </div>
+                <div class="grid-item col-span-full relative z-10 | lg:col-span-4 lg:row-start-2">
+                    <a href="javascript:;" class="btn btn-icon btn-lg btn-dark absolute -bottom-16 right-0 translate-y-1/2" data-hover-effect data-scroll-to="page-content">
+                        <svg class="icon icon-stroke icon-down" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4L12 19.6008M17 15.0001L12 20L7 15" stroke="#141B34" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="relative px-1.5 my-8 | lg:px-3">
+        <figure class="relative aspect-[21/8] rounded-3xl overflow-clip">
+            <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover" data-parallax data-u-scale="1.15">
+        </figure>
+    </div>
+</section>
+
+<section id="page-content" class="py-16 | lg:py-20">
+    <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+        <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+            <div class="grid-item col-span-full | lg:col-span-2 lg:text-end">
+                <div class="lg:inline-flex lg:sticky lg:top-0 lg:pt-[var(--space-header)] lg:-mt-[var(--space-header)]">
+                    <div class="flex flex-row gap-4 items-center pointer-events-auto justify-between | lg:w-min lg:gap-6 lg:flex-col lg:justify-start">
+                        <h6 class="uppercase leading-none tracking-wide text-dark-400 | lg:[writing-mode:vertical-lr]">Share</h6>
+                        <div class="flex items-center gap-1 | lg:flex-col">
+                            <a href="#!" class="btn btn-icon btn-transparent text-dark-900 [--bg-hover:theme('colors.primary.500')] [--icon-hover:white]" data-hover-effect>
+                                <svg class="icon icon-fill icon-up !text-xl" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.55869 10.2083C4.47617 10.2083 4.25024 10.4146 4.25024 11.4028V13.1944C4.25024 14.1826 4.47617 14.3889 5.55869 14.3889H8.17557V21.5556C8.17557 22.5438 8.40149 22.75 9.48401 22.75H12.1009C13.1834 22.75 13.4093 22.5438 13.4093 21.5556V14.3889H16.3477C17.1687 14.3889 17.3803 14.2432 17.6058 13.5226L18.1666 11.7309C18.5529 10.4965 18.3148 10.2083 16.9085 10.2083H13.4093V7.22222C13.4093 6.56255 13.9951 6.02778 14.7178 6.02778H18.4418C19.5243 6.02778 19.7502 5.82154 19.7502 4.83333V2.44444C19.7502 1.45624 19.5243 1.25 18.4418 1.25H14.7178C11.1046 1.25 8.17557 3.92386 8.17557 7.22222V10.2083H5.55869Z" fill="#141B34"/>
+                                </svg>    
+                            </a>
+                            <a href="#!" class="btn btn-icon btn-transparent text-dark-900 [--bg-hover:theme('colors.primary.500')] [--icon-hover:white]" data-hover-effect>
+                                <svg class="icon icon-fill icon-up !text-xl" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.3569 2.78113C2.52359 2.45513 2.85886 2.25 3.225 2.25H8.1C8.41308 2.25 8.70711 2.40034 8.89041 2.65415L13.5354 9.08571L20.0856 2.53557C20.4663 2.15481 21.0837 2.15481 21.4644 2.53557C21.8452 2.91633 21.8452 3.53367 21.4644 3.91443L14.6919 10.687L21.5654 20.2041C21.7798 20.501 21.8098 20.8929 21.6431 21.2189C21.4764 21.5449 21.1411 21.75 20.775 21.75H15.9C15.5869 21.75 15.2929 21.5997 15.1096 21.3459L10.4646 14.9143L3.91443 21.4644C3.53367 21.8452 2.91634 21.8452 2.53557 21.4644C2.15481 21.0837 2.15481 20.4663 2.53557 20.0856L9.30811 13.313L2.43459 3.79585C2.22022 3.49903 2.19021 3.10713 2.3569 2.78113Z" fill="#141B34"/>
+                                </svg>    
+                            </a>
+                            <a href="#!" class="btn btn-icon btn-transparent text-dark-900 [--bg-hover:theme('colors.primary.500')] [--icon-hover:white]" data-hover-effect>
+                                <svg class="icon icon-fill icon-up !text-xl" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.24997C6.06296 1.24997 1.25002 6.06291 1.25002 12C1.25002 13.4809 1.54989 14.8936 2.09293 16.1794C2.23539 16.5167 2.33142 16.7446 2.39557 16.9198C2.46099 17.0984 2.47018 17.1631 2.47134 17.1797C2.47783 17.2736 2.45407 17.4013 2.29192 18.0073L1.2755 21.8061C1.20627 22.0649 1.28029 22.3409 1.46969 22.5303C1.65909 22.7197 1.93512 22.7937 2.19387 22.7245L5.99264 21.7081C6.59867 21.5459 6.72635 21.5222 6.82026 21.5287C6.83692 21.5298 6.90154 21.539 7.08019 21.6044C7.25534 21.6686 7.48326 21.7646 7.82056 21.9071C9.10634 22.4501 10.5191 22.75 12 22.75C17.9371 22.75 22.75 17.937 22.75 12C22.75 6.06291 17.9371 1.24997 12 1.24997ZM8.9729 6.24999L8.88025 6.24989C8.40058 6.24908 7.95809 6.24833 7.52291 6.44711C7.20676 6.59152 6.93775 6.83687 6.74186 7.08193C6.54597 7.32698 6.3659 7.64342 6.29467 7.98363C6.19703 8.44997 6.27755 8.8048 6.36369 9.18438L6.37558 9.23688C6.8101 11.1612 7.82592 13.048 9.38873 14.6108C10.9515 16.1737 12.8384 17.1895 14.7627 17.624L14.8152 17.6359C15.1948 17.722 15.5496 17.8025 16.0159 17.7049C16.3561 17.6337 16.6726 17.4536 16.9176 17.2577C17.1627 17.0618 17.408 16.7928 17.5525 16.4767C17.7512 16.0415 17.7505 15.599 17.7497 15.1193L17.7496 15.0267C17.7496 14.8063 17.7428 14.4352 17.5998 14.0922C17.4291 13.6824 17.0773 13.3447 16.5258 13.2582L16.5201 13.2573L16.5197 13.2573C15.8364 13.1502 15.317 13.0688 14.9496 13.0154C14.7657 12.9887 14.6131 12.9679 14.4937 12.9544C14.3955 12.9432 14.2605 12.9292 14.1475 12.9358C13.6579 12.9645 13.2686 13.163 12.967 13.3697C12.7751 13.5012 12.5665 13.6774 12.4025 13.8159C12.3381 13.8703 12.2805 13.9189 12.2336 13.9567L12.1562 14.019L12.1562 14.019C11.861 14.2567 11.7133 14.3756 11.5313 14.3719C11.3493 14.3681 11.2157 14.2512 10.9486 14.0174C10.7787 13.8687 10.6121 13.7129 10.4494 13.5502C10.2866 13.3874 10.1309 13.2209 9.98214 13.0509C9.74835 12.7839 9.63146 12.6503 9.62771 12.4683C9.62397 12.2862 9.74282 12.1386 9.98054 11.8434L10.0428 11.766C10.0807 11.719 10.1293 11.6615 10.1837 11.5971L10.1837 11.5971C10.3222 11.4331 10.4983 11.2245 10.6299 11.0326C10.8365 10.731 11.0351 10.3416 11.0638 9.85207C11.0704 9.7391 11.0564 9.60404 11.0452 9.50589C11.0316 9.38648 11.0109 9.23384 10.9842 9.04993C10.9308 8.68245 10.8493 8.16297 10.7422 7.47943L10.7413 7.47374C10.6549 6.9223 10.3172 6.5705 9.90741 6.39974C9.5644 6.25679 9.19327 6.24999 8.9729 6.24999Z" fill="#141B34"/>
+                                </svg>    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-8 lg:-order-1 lg:col-start-3">
+                <article class="post-entry">
+                    <p>You’ll notice that since its launch in 2006, Shopify has redefined the landscape of online retail, shaking up the way businesses of all sizes approach e-commerce. The cloud-based e-commerce platform, established in Ottawa, Canada, has been on a crazy journey since and it continues to make significant strides in the digital marketplace.</p>
+                    <p>Shopify works great for people who want to get things up and running fast, without breaking the bank. It's especially good for smaller businesses with straightforward inventory. At Shape, we like Shopify for clients like this because it's easy to use, and they can easily manage their online store without any hassle. Let’s take a look at Shopify and share key statistics and milestones that have shaped its growth.</p>
+                    <p>With its groundbreaking launch marking a new era in online commerce, Shopify has steadily evolved into a major player, capturing a notable share of the global e-commerce software market. The statistics tell a story of resilience, innovation, and strategic adaptation, reflecting the company's unparalleled success and impact on the digital business world. There are many benefits to using Shopify for your brand.</p>
+                    <p>Let's delve into the numbers and unveil the story behind Shopify's rise, analysing its revenue, market presence, technological investments, and transformative business strategies.</p>
+                    <h2>Market Presence and Revenue</h2>
+                    <ul>
+                        <li><b>Shopify Captures 10% of the Worldwide Market Share.</b> Shopify has carved out a significant space for itself, capturing approximately 10% of the worldwide market share in 2023. This substantial market presence is a testament to the platform's reliability and effectiveness. Its ability to meet the diverse needs of businesses across various industries is one reason why we use Shopify at Shape.</li>
+                        <li><b>Shopify Has Seen Major Growth in Revenue Since 2015-2022.</b> In 2022, Shopify recorded an annual revenue of $5.6 billion (£4.8 billion), signifying a notable 21.42% growth rate. Comparing these global total revenue stats to 2015, Shopify has seen an increase of more than $4 billion (£3.4 billion) since, showing consistent growth over time.</li>
+                        <li><b>Shopify Generated Over $6.3 Billion in Revenue in 2023.</b> Stock Analysis statistics show that in the period ending on June 30, 2023, Shopify gained $6.3 billion (£5.4 billion) in revenue showcasing a substantial 25.99% surge compared to 2022. The quarterly revenue ending on June 30, 2023, amounted to $1.69 billion, which marked an impressive 30.81% year-over-year growth.</li>
+                    </ul>
+                    <h2>Platform Features and Adaptability Statistics</h2>
+                    <ul>
+                        <li><b>Over 169k Live Shopify Stores in the UK.</b> The global quarterly expansion of Shopify has demonstrated a remarkable upward trend in recent years, showing its widespread growth globally. In the UK, Shopify observed an 8.3% surge in stores in the third quarter of 2023 compared to the previous quarter, and a substantial 41% increase in stores from the same period the previous year. In 2019, there were 59,450 live Shopify stores. Fast forward to 2023, its increase to over 169k live stores is impressive.</li>
+                        <li><b>Over 42k Shopify Plus Live Websites.</b> Shopify Plus, the enterprise version of the popular e-Commerce platform, has garnered significant traction, with 42,038 live websites currently utilising its advanced features and capabilities. Among these users, 2,800 are based in the UK, highlighting the widespread adoption of Shopify Plus among larger businesses and enterprises, both domestically and internationally.</li>
+                        <li><b>Shopify Supports 21 Languages Currently.</b> There’s nothing worse than a language barrier when you are trying to navigate or browse an online store. In today’s international online retail environment, it’s important that your site can be tailored to the needs of its users. Shopify can enable your business to be explored and accessible to all users since Shopify supports 21 languages.</li>
+                        <li><b>Apparel is a Top Category For Shopify Stores.</b> Apparel emerges as one of the leading categories for Shopify stores, according to recent data. An impressive 26.1% of Shopify Plus stores are dedicated to selling Clothing and Fashion products, highlighting the significant presence of fashion retail within the platform. Following closely behind, 12.1% of Shopify Plus stores focus on offering Beauty & Fitness products whilst 10.8% of stores fall within the Home & Garden category, underscoring the platform's versatility in accommodating various niche markets.</li>
+                        <li><b>Shopify Operates in Over 175 Countries Globally.</b> Shopify's extensive global reach is a testament to its widespread influence in the e-commerce domain. Shopify is used in over 175 countries worldwide, with a significant portion (62%) of its stores, situated in the United States. This shows its prominent position in the American e-commerce landscape. Shopify has established a significant international footprint.</li>
+                        <li><b>Shopify Offer 163 Themes To Choose From.</b> Shopify provides a diverse selection of 163 themes for users to choose from, catering to a wide range of preferences and needs. Among these themes, 12 are available for free, while the remaining 151 are premium paid options. This extensive collection allows users to customise their online stores according to their unique brand identity, aesthetics, and customer appeal. Whether seeking simplicity, elegance, or a specific style, Shopify's varied theme options offer users the flexibility to create a visually appealing and engaging online shopping experience.</li>
+                    </ul>
+                    <figure>
+                        <img src="./assets/images/thumbnails/img02.webp" alt="">
+                        <figcaption>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, illo?</figcaption>
+                    </figure>
+                    <h2>Impact and Effectiveness of Shopify</h2>
+                    <p>The age distribution on Shopify demonstrates a strong affinity among the 25-34 age group, comprising a significant 34.28% of the platform's visitors. In contrast, the senior demographic of 65 and above represents the smallest segment, accounting for just 5.42% of the total visitors. This data sheds light on the platform's appeal to a younger audience, showcasing its ability to cater to the preferences and shopping habits of the tech-savvy millennial and Gen Z populations.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 | lg:py-20">
+    <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+        <div class="grid gap-8 mb-8 | lg:grid-cols-12 lg:gap-16 lg:mb-16">
+            <div class="grid-item col-span-full text-center | lg:col-span-6 lg:col-start-4">
+                <h2 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-500">You might also like</h2>
+            </div>
+        </div>
+        <div class="grid gap-4 gap-y-6 | lg:grid-cols-12 lg:gap-y-8">
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                    </a>
+                </article>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                    </a>
+                </article>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                    </a>
+                </article>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img04.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">Admin</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
+                    </a>
+                </article>
+            </div>
+        </div>
+        <div class="flex justify-center mt-12">
+            <a href="page-news-event.html" class="btn" data-hover-effect>See More News & Event</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer id="sectioon-footer" class="px-1.5 pb-1.5 | lg:px-3 lg:pb-3">
+    <section id="footer-register" class="relative pb-16 pt-8 | lg:pb-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="relative | lg:pt-24">
+                <div class="relative isolate bg-primary-500 rounded-3xl overflow-clip p-8 | lg:p-16 | 2xl:p-20">
+                    <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                        <div class="grid-item col-span-full text-center | lg:col-span-8 lg:text-start">
+                            <div class="inline-flex items-center gap-3 mb-8">
+                                <div class="w-1.5 aspect-square bg-primary-950 rounded-full shrink-0"></div>
+                                <h6 class="uppercase leading-none tracking-wide text-white">Be a part of our lifelong</h6>
+                            </div>
+                            <h2 class="font-title font-medium text-balance leading-none text-white after:content-['.'] after:text-primary-950">Transformative Learning Community Today</h2>
+                        </div>
+                        <div class="grid-item col-span-full | lg:col-span-6 lg:row-start-2">
+                            <a href="#!" class="btn btn-white" data-hover-effect>
+                                Online Registration
+                                <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 -z-[1]">
+                        <div class="absolute bottom-0 right-0 aspect-square rounded-full border border-white/50 w-[calc(22rem+22vw)] translate-x-1/4 translate-y-1/2"></div>
+                        <div class="absolute top-0 left-0 aspect-square rounded-full bg-primary-400/50 w-[calc(20rem+20vw)] -translate-x-1/2 -translate-y-1/2"></div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 left-[55%] pointer-events-none">
+                    <figure class="size-full">
+                        <img src="./assets/images/online-registration.webp" alt="" class="size-full object-contain">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 top-1/2 bottom-0 bg-primary-950 rounded-t-3xl -z-[1]"></div>
+    </section>
+    <section id="footer-top" class="pb-20 pt-8 bg-primary-950 | lg:pb-24">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <a href="./" class="inline-flex items-center gap-3">
+                        <img src="./assets/images/logo/logo-icon-bintang-mulia-default.svg" alt="" class="size-10 object-contain shrink-0">
+                        <div class="inline-flex flex-col">
+                            <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase text-white">Bintang Mulia</h5>
+                            <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase text-white">School</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <!-- <h5 class="font-title font-medium text-balance text-white after:content-['.'] after:text-primary-500 mb-4">About Us</h5> -->
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-4 pb-4 border-b border-white/10">About Us</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">About Us</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Our Network</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Our Campuses</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-4 pb-4 border-b border-white/10">Teaching & Learning</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Academic Overview</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Kindergarten</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Primary School</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Junior School</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Senior School</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-4 pb-4 border-b border-white/10">Head Office</h6>
+                    <address class="not-italic text-white/60 text-balance mb-4">
+                        Jalan Mentawai No. 201 Taman Imam Bonjol, Lippo Village Tangerang, 15139, Indonesia
+                    </address>
+                    <a class="link text-white" href="#!">Get Directions</a>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-4 pb-4 border-b border-white/10">Contact Us</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">info@bintangmulia.com</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">+62 822 1234 5678</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-4 pb-4 border-b border-white/10">Follow Us</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Facebook</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Instagram</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer-bottom" class="pb-8 bg-primary-950 rounded-b-3xl overflow-clip">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="splide group/slide pointer-events-none mb-8 | lg:mb-16" data-slide-footer>
+                <div class="splide__track overflow-visible">
+                    <div class="splide__list">
+                        <div class="splide__slide">
+                            <h1 class="font-title font-medium text-balance leading-none [--font-size:125] text-white after:content-['.'] after:text-primary-500 | lg:[--font-size:86] whitespace-nowrap">Bintang Mulia School</h1>
+                        </div>
+                        <div class="splide__slide">
+                            <h1 class="font-title font-medium text-balance leading-none [--font-size:125] text-white after:content-['.'] after:text-primary-500 | lg:[--font-size:86] whitespace-nowrap">Bintang Mulia School</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h6 id="footer-copyright" class="uppercase leading-none tracking-wide text-white/60 text-center">Copyright © 2024 Bintang Mulia School. All Rights Reserved</h6>
+        </div>
+    </section>
+</footer>
+
+<!-- <div id="modal-adds" class="fixed top-0 inset-x-0 z-[999] hidden" data-modal data-auto-modal>
+    <div class="relative w-full h-dvh flex flex-col overflow-auto pointer-events-none" data-lenis-prevent>
+        <div class="py-12 shrink-0 my-auto">
+            <div class="max-w-screen-2xl mx-auto px-2 lg:px-8 xl:px-8 2xl:px-0">
+                <figure class="relative rounded-lg overflow-clip pointer-events-auto max-w-screen-sm mx-auto" data-modal-content>
+                    <div class="absolute top-0 right-0 p-1">
+                        <button type="button" class="btn btn-icon btn-sm btn-dark" data-hover-effect data-modal-hide>
+                            <svg class="icon icon-stroke" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.0002 4.99994L5.00021 18.9999M5.00021 4.99994L19.0002 18.9999" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="#!">
+                        <img src="./assets/images/thumbnails/announcement.webp" loading="eager" alt="" class="w-full object-cover">
+                    </a>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="preloader"></div>
+
+</div><!--app-->
+
+<script type="module" src="/main.js"></script>
+
+</body>
+</html>

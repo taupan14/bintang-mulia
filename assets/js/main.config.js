@@ -52,6 +52,115 @@ function setupHeader() {
     document.querySelectorAll('#section-header').forEach((sectionHeader) => {
         const spaceHeader = sectionHeader.clientHeight
         document.documentElement.style.setProperty('--space-header', `${spaceHeader}px`)
+
+        const showAnim = gsap.from('#section-header', { 
+            yPercent: -100,
+            paused: true,
+            duration: 0.7,
+            ease: 'custom',
+        }).progress(1)
+          
+        ScrollTrigger.create({
+            start: `top -${spaceHeader}`,
+            end: 'max',
+            onUpdate: (self) => {
+                if (self.direction === -1) {
+                    showAnim.play(); // Play animation if scrolling down
+                    sectionHeader.style.pointerEvents = 'auto'; // Enable pointer events
+                } else {
+                    showAnim.reverse(); // Reverse animation if scrolling up
+                    sectionHeader.style.pointerEvents = 'none'; // Disable pointer events
+                }
+            }
+        })
+
+        let isAnyMenuHovered = false
+        document.querySelectorAll('.nav-header-menu').forEach((navHeaderMenu) => {
+            const navHeaderWrapper = navHeaderMenu.querySelector('.nav-header-wrapper')
+            const navSubMenu = navHeaderMenu.querySelector('.nav-header-submenu')
+            const navMenuContent = navHeaderMenu.querySelector('.nav-menu-content')
+            const backdrop = document.querySelector('#backdrop')
+
+            gsap.set(backdrop, {
+                opacity: 0
+            })
+
+            if (navSubMenu) {
+                navHeaderWrapper.style.zIndex = '-1'
+                navHeaderWrapper.style.pointerEvents = 'none'
+
+                gsap.set(navSubMenu, {
+                    clipPath: 'rect(0% 100% 0% 0%)',
+                    display: 'none'
+                })
+                gsap.set(navMenuContent, {
+                    opacity: 0,
+                    yPercent: 25
+                })
+
+                navHeaderMenu.addEventListener('mouseenter', () => {
+                    isAnyMenuHovered = true
+                    navHeaderWrapper.style.zIndex = 'auto'
+                    navHeaderWrapper.style.pointerEvents = 'auto'
+
+                    document.documentElement.classList.add('is-hover-menu')
+
+                    gsap.to(navSubMenu, {
+                        clipPath: 'rect(0% 100% 100% 0%)',
+                        display: 'block',
+                        duration: 0.7,
+                        ease: 'custom',
+                    })
+                    gsap.to(navMenuContent, {
+                        opacity: 1,
+                        yPercent: 0,
+                        duration: 0.7,
+                        ease: 'custom'
+                    })
+
+                    gsap.to(backdrop, {
+                        opacity: 1,
+                        duration: 0.5,
+                        ease: 'custom'
+                    })
+                })
+
+                navHeaderMenu.addEventListener('mouseleave', () => {
+                    isAnyMenuHovered = false
+                    navHeaderWrapper.style.zIndex = '-1'
+                    navHeaderWrapper.style.pointerEvents = 'none'
+
+                    gsap.to(navSubMenu, {
+                        clipPath: 'rect(0% 100% 0% 0%)',
+                        duration: 0.7,
+                        ease: 'custom',
+                        onComplete: () => {
+                            navSubMenu.style.display = 'none'
+                            
+                        },
+                        onUpdate: () => {
+                            if (!isAnyMenuHovered) {
+                                setTimeout(() => {
+                                    document.documentElement.classList.remove('is-hover-menu')
+                                }, 350)
+                            }
+                        }
+                    })
+                    gsap.to(navMenuContent, {
+                        opacity: 0,
+                        yPercent: 25,
+                        duration: 0.7,
+                        ease: 'custom'
+                    })
+
+                    gsap.to(backdrop, {
+                        opacity: 0,
+                        duration: 0.5,
+                        ease: 'custom'
+                    })
+                })
+            }
+        })
     })
 }
 
@@ -142,6 +251,42 @@ function setupComputedSVG() {
 
 
 
+function handleInput(event) {
+    const inputElement = event.target;
+    if (inputElement.value.length > 0) {
+        inputElement.parentNode.classList.add('is-focus')
+    } else {
+        inputElement.parentNode.classList.remove('is-focus')
+    }
+}
+
+function setupInput() {
+    document.querySelectorAll('.js-textarea').forEach((textareaEl) => {
+        textareaEl.addEventListener('input', () => {
+            textareaEl.style.height = 'auto'
+            textareaEl.style.height = textareaEl.scrollHeight + 'px'
+        })
+    })
+
+    document.querySelectorAll('.c-input').forEach((inputElement) => {
+        if (inputElement.value.length > 0) {
+            inputElement.parentNode.classList.add('is-focus')
+        } else {
+            inputElement.parentNode.classList.remove('is-focus')
+        }
+    
+        inputElement.addEventListener('focus', () => {
+            inputElement.parentNode.classList.add('is-focus')
+        })
+        
+        inputElement.addEventListener('focusout', handleInput)
+        inputElement.addEventListener('input', handleInput)
+        inputElement.addEventListener('change', handleInput)
+    })
+}
+
+
+
 function setupImageFollow() {
     mediaScreen.add("(min-width: 1024px)", () => {
         const imageFollowElements = document.querySelectorAll('[data-hover-image]');
@@ -202,6 +347,7 @@ window.addEventListener('DOMContentLoaded', () => {
         setupComputedSVG()
         setupHeader()
         setupImageFollow()
+        setupInput()
         
     }, 800);
 })

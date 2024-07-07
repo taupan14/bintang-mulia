@@ -1,4 +1,5 @@
 @import '_button.css';
+@import '_input.css';
 
 @tailwind base;
 @tailwind components;
@@ -33,6 +34,12 @@
         leading-6
         text-dark-600
         bg-dark-50
+    }
+
+    b,strong {
+        @apply
+        font-bold
+        text-dark-900
     }
 
     p {
@@ -135,11 +142,19 @@
         .icon {
             &.icon-left {
                 @apply
-                drop-shadow-[2em_0_var(--icon-hover,currentColor)]
+                drop-shadow-[1.25em_0_var(--icon-hover,currentColor)]
             }
             &.icon-right {
                 @apply
-                drop-shadow-[-2em_0_var(--icon-hover,currentColor)]
+                drop-shadow-[-1.25em_0_var(--icon-hover,currentColor)]
+            }
+            &.icon-up {
+                @apply
+                drop-shadow-[0_1.25em_var(--icon-hover,currentColor)]
+            }
+            &.icon-down {
+                @apply
+                drop-shadow-[0_-1.25em_var(--icon-hover,currentColor)]
             }
         }
 
@@ -152,11 +167,19 @@
             .icon {
                 &.icon-left {
                     @apply
-                    -translate-x-[2em]
+                    -translate-x-[1.25em]
                 }
                 &.icon-right {
                     @apply
-                    translate-x-[2em]
+                    translate-x-[1.25em]
+                }
+                &.icon-up {
+                    @apply
+                    -translate-y-[1.25em]
+                }
+                &.icon-down {
+                    @apply
+                    translate-y-[1.25em]
                 }
             }
         }
@@ -178,12 +201,15 @@
     .link {
         @apply
         inline-flex
-        py-0.5
+        /* py-0.5 */
         relative
+        transition-colors
+        duration-700
+        ease-custom
         before:absolute
         before:inset-x-0
         before:bottom-0
-        before:h-px
+        before:h-[var(--line-height,1px)]
         before:bg-[var(--line-hover,theme('colors.primary.500'))]
         before:scale-x-0
         before:origin-right
@@ -217,6 +243,78 @@
             after:aspect-square
             after:shrink-0
             after:bg-[var(--corner-bg,theme('colors.primary.500'))]
+        }
+    }
+
+    .post-entry {
+        h1,h2,h3 {
+            @apply
+            text-4xl
+        }
+        h4,h5 {
+            @apply
+            text-3xl
+        }
+        h1,h2,h3,h4,h5 {
+            @apply
+            mt-12
+            mb-6
+            first:mt-0
+            last:mb-0
+        }
+
+        ul {
+            @apply
+            mb-6
+            flex
+            flex-col
+            gap-2.5
+            last:mb-0;
+            li {
+                @apply
+                relative
+                pl-5
+                before:absolute
+                before:top-2.5
+                before:left-0
+                before:w-1.5
+                before:h-1.5
+                before:rounded-full
+                before:bg-primary-500;
+                ul {
+                    @apply
+                    !my-2.5
+                }
+            }
+        }
+
+        img {
+            @apply
+            block
+            w-full
+            rounded-3xl
+            my-8
+            first:mt-0
+            last:mb-0
+        }
+
+        figure {
+            @apply
+            my-8
+            first:mt-0
+            last:mb-0;
+
+            img {
+                @apply
+                mt-0
+                mb-4
+            }
+
+            figcaption {
+                @apply
+                text-[11px]
+                leading-4
+            }
         }
     }
 }

@@ -1,0 +1,71 @@
+@layer components {
+    select {
+        @apply
+        appearance-none
+        cursor-pointer
+    }
+    [type='number'] {
+        @apply
+        [-moz-appearance:textfield];
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            @apply
+            appearance-none
+        }
+    }
+    .c-label {
+        @apply
+        text-xs
+        font-medium
+        text-dark-400
+        -mb-2
+        transition-all
+        duration-700
+        ease-custom;
+
+        &.c-fix-label {
+            @apply
+            absolute
+            mb-0
+            top-6
+            left-0
+            text-sm
+            leading-4
+            text-dark-900
+        }
+
+        .is-focus & {
+            @apply
+            top-0
+            text-xs
+            text-dark-400
+        }
+    }
+
+    .c-input {
+        @apply
+        shrink-0
+        w-full
+        font-medium
+        text-dark-900
+        leading-5
+        py-[0.8125rem]
+        bg-transparent
+        border-y
+        border-t-transparent
+        border-b-dark-900/30
+        outline-none
+        rounded-none
+
+        hover:border-b-dark-900
+        focus:border-b-dark-900
+    }
+
+    textarea {
+        @apply
+        min-h-12
+        resize-none
+        overflow-hidden
+    }
+}

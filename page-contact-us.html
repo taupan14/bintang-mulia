@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<link rel="preload" href="./assets/fonts/SuisseIntl-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-Book.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/SuisseIntl-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Book.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Blacker-Pro-Text-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/fonts/fonts.css">
+
+<style>
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        z-index: 9999;
+        background-color: #fff;
+    }
+</style>
+
+</head>
+<body>
+
+<div id="app">
+
+<header id="section-header" class="fixed top-0 inset-x-0 z-50">
+    <nav id="nav-header" class="relative isolate py-4 border-t-4 border-primary-500 bg-dark-50 | lg:py-6">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="flex items-center justify-between">
+                <a href="./" class="relative inline-flex items-center gap-3 z-10">
+                    <div class="relative w-10 aspect-square shrink-0">
+                        <img src="./assets/images/logo/logo-icon-bintang-mulia-default.svg" alt="" class="absolute inset-0 object-contain transition-opacity duration-700 ease-custom[.is-hover-menu_&]:opacity-0">
+                        <img src="./assets/images/logo/logo-icon-bintang-mulia-white.svg" alt="" class="absolute inset-0 object-contain opacity-0 transition-opacity duration-700 ease-custom [.is-hover-menu_&]:opacity-100">
+                    </div>
+                    <div class="inline-flex flex-col">
+                        <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase transition-colors duration-700 ease-custom [.is-hover-menu_&]:text-white">Bintang Mulia</h5>
+                        <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase transition-colors duration-700 ease-custom [.is-hover-menu_&]:text-white">School</h5>
+                    </div>
+                </a>
+                <div class="absolute inset-0 grid place-items-center">
+                    <ul class="flex items-center flex-nowrap whitespace-nowrap gap-12">
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                About Us
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
+                            </a>
+                            <div class="nav-header-wrapper absolute top-0 inset-x-0">
+                                <div class="nav-header-submenu relative isolate bg-primary-500 pt-[var(--space-header)]">
+                                    <div class="py-16 | lg:py-20">
+                                        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+                                            <div class="nav-menu-content grid gap-8 whitespace-normal | lg:grid-cols-12 lg:gap-x-16">
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:pr-16">
+                                                    <h4 class="font-title font-medium text-balance leading-none text-primary-950">About Us</h4>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2 lg:pr-16 | 2xl:pr-24">
+                                                    <article class="text-white text-balance">
+                                                        <p>Find out more about us, from identity and ownership structure, to products, services and business lines.</p>
+                                                    </article>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
+                                                    <ul class="grid grid-cols-2 gap-1 group/menu">
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">About Us</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Our Network</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Our Campuses</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Gallery</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-y-0 right-0 left-1/2 -z-[1] mix-blend-multiply opacity-50">
+                                        <figure class="size-full [mask-image:linear-gradient(to_right,transparent,black)]">
+                                            <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover grayscale">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Admission
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
+                            </a>
+                            <div class="nav-header-wrapper absolute top-0 inset-x-0">
+                                <div class="nav-header-submenu relative isolate bg-primary-500 pt-[var(--space-header)]">
+                                    <div class="py-16 | lg:py-20">
+                                        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+                                            <div class="nav-menu-content grid gap-8 whitespace-normal | lg:grid-cols-12 lg:gap-x-16">
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:pr-16">
+                                                    <h4 class="font-title font-medium text-balance leading-none text-primary-950">Admission</h4>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2 lg:pr-16 | 2xl:pr-24">
+                                                    <article class="text-white text-balance">
+                                                        <p>Find out more about us, from identity and ownership structure, to products, services and business lines.</p>
+                                                    </article>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
+                                                    <ul class="grid grid-cols-2 gap-1 group/menu">
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Registration Process</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Test Information</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Registration Guide</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Visit Bintang Mulia</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-y-0 right-0 left-1/2 -z-[1] mix-blend-multiply opacity-50">
+                                        <figure class="size-full [mask-image:linear-gradient(to_right,transparent,black)]">
+                                            <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover grayscale">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Teaching & Learning
+                                <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
+                            </a>
+                            <div class="nav-header-wrapper absolute top-0 inset-x-0">
+                                <div class="nav-header-submenu relative isolate bg-primary-500 pt-[var(--space-header)]">
+                                    <div class="py-16 | lg:py-20">
+                                        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+                                            <div class="nav-menu-content grid gap-8 whitespace-normal | lg:grid-cols-12 lg:gap-x-16">
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:pr-16">
+                                                    <h4 class="font-title font-medium text-balance leading-none text-primary-950">Teaching & Learning</h4>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-4 lg:row-start-2 lg:pr-16 | 2xl:pr-24">
+                                                    <article class="text-white text-balance">
+                                                        <p>Find out more about us, from identity and ownership structure, to products, services and business lines.</p>
+                                                    </article>
+                                                </div>
+                                                <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
+                                                    <ul class="grid grid-cols-2 gap-1 group/menu">
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Academic Overview</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Kindergarten</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Primary School</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Junior School</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Senior School</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Elective Class</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute inset-y-0 right-0 left-1/2 -z-[1] mix-blend-multiply opacity-50">
+                                        <figure class="size-full [mask-image:linear-gradient(to_right,transparent,black)]">
+                                            <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover grayscale">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-header-menu inline-flex group">
+                            <a href="page-news-event.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                News & Event
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative flex items-center z-10">
+                    <a href="page-contact-us.html" class="btn btn-primary [.is-hover-menu_&]:btn-white" data-hover-effect>
+                        Contact Us
+                        <svg class="icon icon-stroke circle-icon circle-left icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="backdrop" class="absolute top-0 left-0 w-screen h-dvh backdrop-blur-md bg-primary-950/30 -z-[2] pointer-events-none"></div>
+    </nav>
+</header>
+
+<main>
+
+<section id="page-header" class="relative pt-[var(--space-header)]">
+    <div class="pt-16 pb-8 | lg:pt-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-8">
+                    <div class="relative">
+                        <div class="inline-flex items-center gap-3 mb-6 | lg:absolute lg:left-0 lg:top-[clamp(1rem,32/1440*100vw,32/1440*100vw)] lg:mb-0">
+                            <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                            <h6 class="uppercase leading-none tracking-wide">Contact Us</h6>
+                        </div>
+                        <h2 class="font-title font-medium text-balance leading-none [--font-size:128] after:content-['.'] after:text-primary-500 | lg:[--font-size:96] lg:indent-40">We’d love to hear from you</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 | lg:py-20">
+    <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+        <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+            <div class="grid-item col-span-full | lg:col-span-4">
+                <article class="text-balance mb-8 | lg:mb-16">
+                    <p>For general enquiries, please fill out the form to get in touch. Alternatively, if you know your project details — head over to our project planner for a more refined step-by-step process.</p>
+                </article>
+                <div class="flex flex-col gap-3">
+                    <h5><a href="#!" class="link [--line-height:2px]">+62 821-1234-5678</a></h5>
+                    <h5 class="text-primary-500"><a href="#!" class="link [--line-height:2px]">info@bintangmulia.com</a></h5>
+                </div>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-8">
+                <div class="grid gap-6 | lg:grid-cols-2 lg:gap-y-8">
+                    <div class="grid-item col-span-full | lg:col-span-1">
+                        <div class="relative flex flex-col pt-2">
+                            <label class="c-label c-fix-label">Full Name</label>
+                            <input type="text" class="c-input">
+                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                        </div>
+                    </div>
+                    <div class="grid-item col-span-full | lg:col-span-1">
+                        <div class="relative flex flex-col pt-2">
+                            <label class="c-label c-fix-label">Email Address</label>
+                            <input type="email" class="c-input">
+                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                        </div>
+                    </div>
+                    <div class="grid-item col-span-full | lg:col-span-1">
+                        <div class="relative flex flex-col pt-2">
+                            <label class="c-label c-fix-label">Phone <span class="opacity-50">(Optional)</span></label>
+                            <input type="number" inputmode="numeric" class="c-input">
+                            <!-- <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div> -->
+                        </div>
+                    </div>
+                    <div class="grid-item col-span-full | lg:col-span-1">
+                        <div class="relative flex flex-col pt-2">
+                            <label class="c-label c-fix-label">Subject</label>
+                            <input type="text" class="c-input">
+                            <!-- <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div> -->
+                        </div>
+                    </div>
+                    <div class="grid-item col-span-full">
+                        <div class="relative flex flex-col pt-2">
+                            <label class="c-label c-fix-label">Subject</label>
+                            <textarea rows="4" class="c-input js-textarea"></textarea>
+                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 mt-16 text-center | lg:flex-row lg:items-center lg:justify-between lg:text-start">
+                    <p class="mb-0">By submitting this form I accept the <a href="#!" target="_blank" class="link font-semibold text-dark-900">Privacy Policy</a> of this site.</p>
+                    <button type="button" class="btn btn-primary" data-hover-effect>
+                        Send a message
+                        <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+</main>
+
+<footer id="sectioon-footer" class="px-1.5 pb-1.5 | lg:px-3 lg:pb-3">
+    <section id="footer-register" class="relative pb-16 pt-8 | lg:pb-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="relative | lg:pt-24">
+                <div class="relative isolate bg-primary-500 rounded-3xl overflow-clip p-8 | lg:p-16 | 2xl:p-20">
+                    <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                        <div class="grid-item col-span-full text-center | lg:col-span-8 lg:text-start">
+                            <div class="inline-flex items-center gap-3 mb-8">
+                                <div class="w-1.5 aspect-square bg-primary-950 rounded-full shrink-0"></div>
+                                <h6 class="uppercase leading-none tracking-wide text-white">Be a part of our lifelong</h6>
+                            </div>
+                            <h2 class="font-title font-medium text-balance leading-none text-white after:content-['.'] after:text-primary-950">Transformative Learning Community Today</h2>
+                        </div>
+                        <div class="grid-item col-span-full | lg:col-span-6 lg:row-start-2">
+                            <a href="#!" class="btn btn-white" data-hover-effect>
+                                Online Registration
+                                <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 -z-[1]">
+                        <div class="absolute bottom-0 right-0 aspect-square rounded-full border border-white/50 w-[calc(22rem+22vw)] translate-x-1/4 translate-y-1/2"></div>
+                        <div class="absolute top-0 left-0 aspect-square rounded-full bg-primary-400/50 w-[calc(20rem+20vw)] -translate-x-1/2 -translate-y-1/2"></div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 left-[55%] pointer-events-none">
+                    <figure class="size-full">
+                        <img src="./assets/images/online-registration.webp" alt="" class="size-full object-contain">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 top-1/2 bottom-0 bg-primary-950 rounded-t-3xl -z-[1]"></div>
+    </section>
+    <section id="footer-top" class="pb-20 pt-8 bg-primary-950 | lg:pb-24">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <a href="./" class="inline-flex items-center gap-3">
+                        <img src="./assets/images/logo/logo-icon-bintang-mulia-default.svg" alt="" class="size-10 object-contain shrink-0">
+                        <div class="inline-flex flex-col">
+                            <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase text-white">Bintang Mulia</h5>
+                            <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase text-white">School</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <!-- <h5 class="font-title font-medium text-balance text-white after:content-['.'] after:text-primary-500 mb-4">About Us</h5> -->
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-4 pb-4 border-b border-white/10">About Us</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">About Us</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Our Network</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Our Campuses</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-4 pb-4 border-b border-white/10">Teaching & Learning</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Academic Overview</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Kindergarten</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Primary School</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Junior School</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Senior School</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-4 pb-4 border-b border-white/10">Head Office</h6>
+                    <address class="not-italic text-white/60 text-balance mb-4">
+                        Jalan Mentawai No. 201 Taman Imam Bonjol, Lippo Village Tangerang, 15139, Indonesia
+                    </address>
+                    <a class="link text-white" href="#!">Get Directions</a>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-4 pb-4 border-b border-white/10">Contact Us</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">info@bintangmulia.com</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">+62 822 1234 5678</a></li>
+                    </ul>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-4">
+                    <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-4 pb-4 border-b border-white/10">Follow Us</h6>
+                    <ul class="flex flex-col gap-1 group/menu">
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Facebook</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Instagram</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer-bottom" class="pb-8 bg-primary-950 rounded-b-3xl overflow-clip">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="splide group/slide pointer-events-none mb-8 | lg:mb-16" data-slide-footer>
+                <div class="splide__track overflow-visible">
+                    <div class="splide__list">
+                        <div class="splide__slide">
+                            <h1 class="font-title font-medium text-balance leading-none [--font-size:125] text-white after:content-['.'] after:text-primary-500 | lg:[--font-size:86] whitespace-nowrap">Bintang Mulia School</h1>
+                        </div>
+                        <div class="splide__slide">
+                            <h1 class="font-title font-medium text-balance leading-none [--font-size:125] text-white after:content-['.'] after:text-primary-500 | lg:[--font-size:86] whitespace-nowrap">Bintang Mulia School</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h6 id="footer-copyright" class="uppercase leading-none tracking-wide text-white/60 text-center">Copyright © 2024 Bintang Mulia School. All Rights Reserved</h6>
+        </div>
+    </section>
+</footer>
+
+<!-- <div id="modal-adds" class="fixed top-0 inset-x-0 z-[999] hidden" data-modal data-auto-modal>
+    <div class="relative w-full h-dvh flex flex-col overflow-auto pointer-events-none" data-lenis-prevent>
+        <div class="py-12 shrink-0 my-auto">
+            <div class="max-w-screen-2xl mx-auto px-2 lg:px-8 xl:px-8 2xl:px-0">
+                <figure class="relative rounded-lg overflow-clip pointer-events-auto max-w-screen-sm mx-auto" data-modal-content>
+                    <div class="absolute top-0 right-0 p-1">
+                        <button type="button" class="btn btn-icon btn-sm btn-dark" data-hover-effect data-modal-hide>
+                            <svg class="icon icon-stroke" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.0002 4.99994L5.00021 18.9999M5.00021 4.99994L19.0002 18.9999" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="#!">
+                        <img src="./assets/images/thumbnails/announcement.webp" loading="eager" alt="" class="w-full object-cover">
+                    </a>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="preloader"></div>
+
+</div><!--app-->
+
+<script type="module" src="/main.js"></script>
+
+</body>
+</html>

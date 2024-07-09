@@ -327,6 +327,39 @@ function setupImageFollow() {
 
 
 
+// function setupCircularSlide() {
+//     document.querySelectorAll('[data-circular-slide]').forEach((circularSlide) => {
+//         const slideItems = circularSlide.querySelectorAll('[data-slide-item]')
+//         const currentItemCount = slideItems.length
+//         const itemsNeeded = 36 - currentItemCount
+
+//         for (let i = 0; i < itemsNeeded; i++) {
+//             const clone = slideItems[i % currentItemCount].cloneNode(true);
+//             circularSlide.appendChild(clone)
+//         }
+
+//         const updatedSlideItems = circularSlide.querySelectorAll('[data-slide-item]')
+
+//         updatedSlideItems.forEach((slideItem, index) => {
+//             const slideWidth = slideItem.clientWidth
+//             const rotationAngle = index * 10
+//             slideItem.parentNode.parentNode.style.transformOrigin = `${slideWidth / 2}px 160vmax`
+//             slideItem.style.transformOrigin = `${slideWidth / 2}px 160vmax`
+//             slideItem.style.transform = `rotate(${rotationAngle}deg)`
+
+//             gsap.to(slideItem, {
+//                 rotation: "-=360",
+//                 transformOrigin: `${slideWidth / 2}px 160vmax`,
+//                 ease: "none",
+//                 repeat: -1,
+//                 duration: 200
+//             })
+//         })
+//     })
+// }
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.documentElement.classList.add('is-load')
@@ -349,5 +382,5 @@ window.addEventListener('DOMContentLoaded', () => {
         setupImageFollow()
         setupInput()
         
-    }, 800);
+    }, 500)
 })

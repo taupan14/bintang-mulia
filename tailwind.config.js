@@ -39,6 +39,9 @@ export default {
             transitionTimingFunction: {
                 'custom': 'cubic-bezier(.135,.9,.15,1)',
             },
+            backgroundImage: {
+                'star': 'url(./assets/images/ic_star.svg)'
+            }
         },
     },
     plugins: [],

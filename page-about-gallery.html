@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/fonts/fonts.css">
 
 <style>
     #preloader {
@@ -29,8 +30,6 @@
     }
 </style>
 
-  <script type="module" crossorigin src="./assets/js/main.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/css/main.css">
 </head>
 <body>
 
@@ -192,14 +191,12 @@
     <div class="pt-16 pb-8 | lg:pt-20">
         <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
             <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
-                <div class="grid-item col-span-full | lg:col-span-8">
-                    <div class="relative">
-                        <div class="inline-flex items-center gap-3 mb-6 | lg:absolute lg:left-0 lg:top-[clamp(1rem,32/1440*100vw,32/1440*100vw)] lg:mb-0">
-                            <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
-                            <h6 class="uppercase leading-none tracking-wide">Contact Us</h6>
-                        </div>
-                        <h2 class="font-title font-medium text-balance leading-none [--font-size:128] after:content-['.'] after:text-primary-500 | lg:[--font-size:96] lg:indent-40">We’d love to hear from you</h2>
+                <div class="grid-item col-span-full text-center | lg:col-span-6 lg:col-start-4">
+                    <div class="inline-flex items-center gap-3 mb-8">
+                        <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                        <h6 class="uppercase leading-none tracking-wide">Gallery</h6>
                     </div>
+                    <h2 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-500">Every Day is a New Opportunity</h2>
                 </div>
             </div>
         </div>
@@ -208,63 +205,262 @@
 
 <section class="py-16 | lg:py-20">
     <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
-        <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
-            <div class="grid-item col-span-full | lg:col-span-4">
-                <article class="text-balance mb-8 | lg:mb-16">
-                    <p>For general enquiries, please fill out the form to get in touch. Alternatively, if you know your project details — head over to our project planner for a more refined step-by-step process.</p>
+        <div class="grid gap-4 gap-y-6 | lg:grid-cols-12 lg:gap-y-8">
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="page-about-gallery-detail.html" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="page-about-gallery-detail.html" class="relative p-4 flex flex-col gap-2 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">12 Photos</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Album Title</h5>
+                    </a>
                 </article>
-                <div class="flex flex-col gap-3">
-                    <h5><a href="#!" class="link [--line-height:2px]">+62 821-1234-5678</a></h5>
-                    <h5 class="text-primary-500"><a href="#!" class="link [--line-height:2px]">info@bintangmulia.com</a></h5>
-                </div>
             </div>
-            <div class="grid-item col-span-full | lg:col-span-8">
-                <div class="grid gap-6 | lg:grid-cols-2 lg:gap-y-8">
-                    <div class="grid-item col-span-full | lg:col-span-1">
-                        <div class="relative flex flex-col pt-2">
-                            <label class="c-label c-fix-label">Full Name</label>
-                            <input type="text" class="c-input">
-                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
-                        </div>
-                    </div>
-                    <div class="grid-item col-span-full | lg:col-span-1">
-                        <div class="relative flex flex-col pt-2">
-                            <label class="c-label c-fix-label">Email Address</label>
-                            <input type="email" class="c-input">
-                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
-                        </div>
-                    </div>
-                    <div class="grid-item col-span-full | lg:col-span-1">
-                        <div class="relative flex flex-col pt-2">
-                            <label class="c-label c-fix-label">Phone <span class="opacity-50">(Optional)</span></label>
-                            <input type="number" inputmode="numeric" class="c-input">
-                            <!-- <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div> -->
-                        </div>
-                    </div>
-                    <div class="grid-item col-span-full | lg:col-span-1">
-                        <div class="relative flex flex-col pt-2">
-                            <label class="c-label c-fix-label">Subject</label>
-                            <input type="text" class="c-input">
-                            <!-- <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div> -->
-                        </div>
-                    </div>
-                    <div class="grid-item col-span-full">
-                        <div class="relative flex flex-col pt-2">
-                            <label class="c-label c-fix-label">Subject</label>
-                            <textarea rows="4" class="c-input js-textarea"></textarea>
-                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-4 mt-16 text-center | lg:flex-row lg:items-center lg:justify-between lg:text-start">
-                    <p class="mb-0">By submitting this form I accept the <a href="#!" target="_blank" class="link font-semibold text-dark-900">Privacy Policy</a> of this site.</p>
-                    <button type="button" class="btn btn-primary" data-hover-effect>
-                        Send a message
-                        <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
-                        </svg>
-                    </button>
-                </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="page-about-gallery-detail.html" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="page-about-gallery-detail.html" class="relative p-4 flex flex-col gap-2 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">12 Photos</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Album Title</h5>
+                    </a>
+                </article>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="page-about-gallery-detail.html" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="page-about-gallery-detail.html" class="relative p-4 flex flex-col gap-2 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">12 Photos</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Album Title</h5>
+                    </a>
+                </article>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img04.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="page-about-gallery-detail.html" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="page-about-gallery-detail.html" class="relative p-4 flex flex-col gap-2 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">12 Photos</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Album Title</h5>
+                    </a>
+                </article>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img05.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="page-about-gallery-detail.html" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="page-about-gallery-detail.html" class="relative p-4 flex flex-col gap-2 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">12 Photos</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Album Title</h5>
+                    </a>
+                </article>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="page-about-gallery-detail.html" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="page-about-gallery-detail.html" class="relative p-4 flex flex-col gap-2 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">12 Photos</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Album Title</h5>
+                    </a>
+                </article>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="page-about-gallery-detail.html" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="page-about-gallery-detail.html" class="relative p-4 flex flex-col gap-2 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">12 Photos</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Album Title</h5>
+                    </a>
+                </article>
+            </div>
+            <div class="grid-item col-span-full | lg:col-span-3">
+                <article class="flex flex-col group">
+                    <figure class="relative aspect-square rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
+                        <a href="page-about-gallery-detail.html" class="absolute inset-0 p-4">
+                            <div class="flex justify-end">
+                                <div class="inline-flex">
+                                    <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
+                                        <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                            <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </figure>
+                    <a href="page-about-gallery-detail.html" class="relative p-4 flex flex-col gap-2 | lg:p-6">
+                        <ul class="flex items-center gap-4 justify-between">
+                            <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
+                            <li><h6 class="font-medium text-dark-400">12 Photos</h6></li>
+                        </ul>
+                        <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Album Title</h5>
+                    </a>
+                </article>
+            </div>
+            
+        </div>
+        <div class="flex mt-16 lg:justify-center">
+            <div class="flex grow items-center gap-4 bg-dark-200 rounded-full p-1 | lg:grow-0">
+                <a href="#!" class="btn btn-sm btn-icon btn-dark" data-hover-effect disabled>
+                    <svg class="icon icon-stroke icon-left" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 6L9 12L15 18" stroke="#141B34" stroke-width="1.5" stroke-miterlimit="16"/>
+                    </svg>
+                </a>
+                <h6 class="uppercase leading-none tracking-wide grow text-center | lg:hidden">Page 1 of 12</h6>
+                <ul class="hidden items-center gap-1 | lg:flex">
+                    <li class="inline-flex">
+                        <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary is-active">
+                            <span class="text-xs font-bold">1</span>
+                        </a>
+                    </li>
+                    <li class="inline-flex">
+                        <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary">
+                            <span class="text-xs font-bold">2</span>
+                        </a>
+                    </li>
+                    <li class="inline-flex">
+                        <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary">
+                            <span class="text-xs font-bold">3</span>
+                        </a>
+                    </li>
+                    <li class="inline-flex">
+                        <a href="#!" class="btn btn-sm btn-icon btn-transparent" disabled>
+                            <span class="text-xs font-bold">...</span>
+                        </a>
+                    </li>
+                    <li class="inline-flex">
+                        <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary">
+                            <span class="text-xs font-bold">11</span>
+                        </a>
+                    </li>
+                    <li class="inline-flex">
+                        <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary">
+                            <span class="text-xs font-bold">12</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#!" class="btn btn-sm btn-icon btn-dark" data-hover-effect>
+                    <svg class="icon icon-stroke icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.00005 6L15 12L9 18" stroke="#141B34" stroke-width="1.5" stroke-miterlimit="16"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </div>
@@ -412,6 +608,7 @@
 
 </div><!--app-->
 
+<script type="module" src="/main.js"></script>
 
 </body>
 </html>

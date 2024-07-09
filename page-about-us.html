@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/fonts/fonts.css">
 
 <style>
     #preloader {
@@ -29,8 +30,6 @@
     }
 </style>
 
-  <script type="module" crossorigin src="./assets/js/main.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/css/main.css">
 </head>
 <body>
 
@@ -188,82 +187,188 @@
 
 <main>
 
-<section id="page-header" class="relative pt-[var(--space-header)] overflow-x-clip">
+<section id="page-header" class="relative pt-[var(--space-header)]">
     <div class="pt-16 pb-8 | lg:pt-20">
         <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
             <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
-                <div class="grid-item col-span-full | lg:col-span-8">
-                    <div class="relative">
-                        <div class="inline-flex items-center gap-3 mb-6 | lg:absolute lg:left-0 lg:top-[clamp(1rem,32/1440*100vw,32/1440*100vw)] lg:mb-0">
-                            <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
-                            <h6 class="uppercase leading-none tracking-wide">Contact Us</h6>
-                        </div>
-                        <h2 class="font-title font-medium text-balance leading-none [--font-size:128] after:content-['.'] after:text-primary-500 | lg:[--font-size:96] lg:indent-40">We’d love to hear from you</h2>
+                <div class="grid-item col-span-full text-center | lg:col-span-6 lg:col-start-4">
+                    <div class="inline-flex items-center gap-3 mb-8">
+                        <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                        <h6 class="uppercase leading-none tracking-wide">About Us</h6>
                     </div>
+                    <h2 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-500">Learn More About Bintang Mulia School</h2>
+                </div>
+                <div class="grid-item col-span-full text-center">
+                    <a href="javascript:;" class="btn btn-primary" data-hover-effect data-scroll-to="page-content">
+                        Learn about us
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="absolute inset-0 will-change-transform -z-[1]" data-circular-slide>
+                <div class="absolute top-0 inset-x-0 w-min mx-auto h-dvh pt-[20rem]" data-slide-item>
+                    <figure class="w-[calc(calc(100vw/5)-1rem)] aspect-[3/4] rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover">
+                    </figure>
+                </div>
+                <div class="absolute top-0 inset-x-0 w-min mx-auto h-dvh pt-[20rem]" data-slide-item>
+                    <figure class="w-[calc(calc(100vw/5)-1rem)] aspect-[3/4] rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover">
+                    </figure>
+                </div>
+                <div class="absolute top-0 inset-x-0 w-min mx-auto h-dvh pt-[20rem]" data-slide-item>
+                    <figure class="w-[calc(calc(100vw/5)-1rem)] aspect-[3/4] rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover">
+                    </figure>
+                </div>
+                <div class="absolute top-0 inset-x-0 w-min mx-auto h-dvh pt-[20rem]" data-slide-item>
+                    <figure class="w-[calc(calc(100vw/5)-1rem)] aspect-[3/4] rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img04.webp" alt="" class="size-full object-cover">
+                    </figure>
+                </div>
+                <div class="absolute top-0 inset-x-0 w-min mx-auto h-dvh pt-[20rem]" data-slide-item>
+                    <figure class="w-[calc(calc(100vw/5)-1rem)] aspect-[3/4] rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img05.webp" alt="" class="size-full object-cover">
+                    </figure>
+                </div>
+                <div class="absolute top-0 inset-x-0 w-min mx-auto h-dvh pt-[20rem]" data-slide-item>
+                    <figure class="w-[calc(calc(100vw/5)-1rem)] aspect-[3/4] rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img06.webp" alt="" class="size-full object-cover">
+                    </figure>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="splide group/slide pointer-events-none my-8" data-slide-about>
+        <div class="splide__track overflow-visible">
+            <div class="splide__list">
+                <div class="splide__slide">
+                    <figure class="aspect-[3/4] rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover">
+                    </figure>
+                </div>
+                <div class="splide__slide">
+                    <figure class="aspect-[3/4] rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover">
+                    </figure>
+                </div>
+                <div class="splide__slide">
+                    <figure class="aspect-[3/4] rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover">
+                    </figure>
+                </div>
+                <div class="splide__slide">
+                    <figure class="aspect-[3/4] rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img04.webp" alt="" class="size-full object-cover">
+                    </figure>
+                </div>
+                <div class="splide__slide">
+                    <figure class="aspect-[3/4] rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img05.webp" alt="" class="size-full object-cover">
+                    </figure>
+                </div>
+                <div class="splide__slide">
+                    <figure class="aspect-[3/4] rounded-3xl overflow-clip">
+                        <img src="./assets/images/thumbnails/img06.webp" alt="" class="size-full object-cover">
+                    </figure>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-16 | lg:py-20">
-    <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
-        <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
-            <div class="grid-item col-span-full | lg:col-span-4">
-                <article class="text-balance mb-8 | lg:mb-16">
-                    <p>For general enquiries, please fill out the form to get in touch. Alternatively, if you know your project details — head over to our project planner for a more refined step-by-step process.</p>
-                </article>
-                <div class="flex flex-col gap-3">
-                    <h5><a href="#!" class="link [--line-height:2px]">+62 821-1234-5678</a></h5>
-                    <h5 class="text-primary-500"><a href="#!" class="link [--line-height:2px]">info@bintangmulia.com</a></h5>
+<section id="page-content" class="py-16 | lg:py-20">
+    <div class="py-16 | lg:py-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-6 mb-8 | lg:grid-cols-12 lg:gap-16 lg:mb-16">
+                <div class="grid-item col-span-full | lg:col-span-2">
+                    <div class="inline-flex items-center gap-3 mb-8">
+                        <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                        <h6 class="uppercase leading-none tracking-wide">About Us</h6>
+                    </div>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-8">
+                    <h4 class="font-title font-medium text-balancse after:content-['.'] after:text-primary-500">Welcome, we provide a Christ-centered, transformative and holistic education. We believe parents as the prime educator of their children to walk alongside with the school as the second home for your children</h4>
                 </div>
             </div>
-            <div class="grid-item col-span-full | lg:col-span-8">
-                <div class="grid gap-6 | lg:grid-cols-2 lg:gap-y-8">
-                    <div class="grid-item col-span-full | lg:col-span-1">
-                        <div class="relative flex flex-col pt-2">
-                            <label class="c-label c-fix-label">Full Name</label>
-                            <input type="text" class="c-input">
-                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
-                        </div>
-                    </div>
-                    <div class="grid-item col-span-full | lg:col-span-1">
-                        <div class="relative flex flex-col pt-2">
-                            <label class="c-label c-fix-label">Email Address</label>
-                            <input type="email" class="c-input">
-                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
-                        </div>
-                    </div>
-                    <div class="grid-item col-span-full | lg:col-span-1">
-                        <div class="relative flex flex-col pt-2">
-                            <label class="c-label c-fix-label">Phone <span class="opacity-50">(Optional)</span></label>
-                            <input type="number" inputmode="numeric" class="c-input">
-                            <!-- <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div> -->
-                        </div>
-                    </div>
-                    <div class="grid-item col-span-full | lg:col-span-1">
-                        <div class="relative flex flex-col pt-2">
-                            <label class="c-label c-fix-label">Subject</label>
-                            <input type="text" class="c-input">
-                            <!-- <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div> -->
-                        </div>
-                    </div>
-                    <div class="grid-item col-span-full">
-                        <div class="relative flex flex-col pt-2">
-                            <label class="c-label c-fix-label">Subject</label>
-                            <textarea rows="4" class="c-input js-textarea"></textarea>
-                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
-                        </div>
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-8 lg:col-start-3">
+                    <article class="lg:grid lg:grid-cols-2 lg:gap-16">
+                        <p>SDH is a network of Christian schools under the Pelita Harapan Education Foundation that offers K-12 education. Starting in 1995 in Lippo Village, SDH currently has 16 campuses throughout Indonesia, with around 14,000 students.</p>
+                        <p>We welcome you to know more about SDH, please contact us, ask about what we believe and do at school. We want to provide a second home for your children.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-16 | lg:py-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | md:col-span-6 | lg:col-span-3">
+                    <div class="flex flex-col gap-4">
+                        <h5 class="font-title font-medium text-balance leading-none pb-4 border-b border-dark-900/20 text-primary-500">Active Students</h5>
+                        <h2 class="tracking-tighter">12.000</h2>
+                        <article class="text-xs leading-5">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, dolorum?</p>
+                        </article>
                     </div>
                 </div>
-                <div class="flex flex-col gap-4 mt-16 text-center | lg:flex-row lg:items-center lg:justify-between lg:text-start">
-                    <p class="mb-0">By submitting this form I accept the <a href="#!" target="_blank" class="link font-semibold text-dark-900">Privacy Policy</a> of this site.</p>
-                    <button type="button" class="btn btn-primary" data-hover-effect>
-                        Send a message
-                        <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
-                        </svg>
-                    </button>
+                <div class="grid-item col-span-full | md:col-span-6 | lg:col-span-3">
+                    <div class="flex flex-col gap-4">
+                        <h5 class="font-title font-medium text-balance leading-none pb-4 border-b border-dark-900/20 text-primary-500">Certified Teachers</h5>
+                        <h2 class="tracking-tighter">512</h2>
+                        <article class="text-xs leading-5">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, dolorum?</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="grid-item col-span-full | md:col-span-6 | lg:col-span-3">
+                    <div class="flex flex-col gap-4">
+                        <h5 class="font-title font-medium text-balance leading-none pb-4 border-b border-dark-900/20 text-primary-500">National Awards</h5>
+                        <h2 class="tracking-tighter">168</h2>
+                        <article class="text-xs leading-5">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, dolorum?</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="grid-item col-span-full | md:col-span-6 | lg:col-span-3">
+                    <div class="flex flex-col gap-4">
+                        <h5 class="font-title font-medium text-balance leading-none pb-4 border-b border-dark-900/20 text-primary-500">Graduates</h5>
+                        <h2 class="tracking-tighter">28.987</h2>
+                        <article class="text-xs leading-5">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, dolorum?</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-16 | lg:py-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-6">
+                    <figure class="aspect-square rounded-3xl overflow-clip | lg:h-full">
+                        <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover" data-parallax data-u-scale="1.15">
+                    </figure>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-5 lg:col-start-8">
+                    <div class="flex flex-col | lg:h-full">
+                        <div class="relative mb-8 | lg:mb-16">
+                            <div class="inline-flex items-center gap-3 mb-8">
+                                <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                                <h6 class="uppercase leading-none tracking-wide">History</h6>
+                            </div>
+                            <h2 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-950">The Founding Member</h2>
+                        </div>
+                        <article class="post-entry mt-auto">
+                            <p>Bintang Mulia School is a Christian school providing holistic transformational education based on enriched national curriculum, aiming to develop students to be the change agents of the world. The word “Dian” means “an apparatus that gives off light”, which envision Dian Harapan schools as a source of Hope and Light for Indonesia’s future in education.</p>
+                            <ul>
+                                <li><b>Experienced faculty and teachers</b>, amet consectetur adipisicing elit. Odit ipsa sit quia?</li>
+                                <li><b>Flexible payment methods</b>, quibusdam saepe dignissimos voluptas, aperiam nostrum a sequi earum.</li>
+                                <li><b>Supportive Parents & Friends</b>, tenetur magni aut laudantium dolorem at?</li>
+                                <li><b>Popular digital blended learning</b>, praesentium rerum beatae natus necessitatibus qui deserunt! Magni.</li>
+                            </ul>
+                        </article>
+                    </div>
                 </div>
             </div>
         </div>
@@ -412,6 +517,7 @@
 
 </div><!--app-->
 
+<script type="module" src="/main.js"></script>
 
 </body>
 </html>

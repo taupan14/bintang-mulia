@@ -45,3 +45,20 @@ document.querySelectorAll('[data-slide-footer]').forEach((slideEl) => {
     })
     slideFooter.mount({AutoScroll})
 })
+
+document.querySelectorAll('[data-slide-about]').forEach((slideEl) => {
+    const slideAbout = new Splide(slideEl, {
+        type: 'loop',
+        perPage: 5,
+        gap: 16*2,
+        speed: 700,
+        easing: 'cubic-bezier(.135,.9,.15,1)',
+        arrows: false,
+        pagination: false,
+        autoScroll: {
+            pauseOnFocus: false,
+            pauseOnHover: false
+        },
+    })
+    slideAbout.mount({AutoScroll})
+})

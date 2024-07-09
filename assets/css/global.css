@@ -1,5 +1,6 @@
 @import '_button.css';
 @import '_input.css';
+@import '_gallery.css';
 
 @tailwind base;
 @tailwind components;
@@ -26,6 +27,11 @@
             @apply
             bg-dark-600
         }
+    }
+
+    #app {
+        @apply
+        overflow-clip
     }
 
     body {

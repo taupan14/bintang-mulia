@@ -1,3 +1,4 @@
+import '@js/gallery.config'
 import '@js/parallax.config'
 import '@js/modal.config'
 import '@js/slide.config'

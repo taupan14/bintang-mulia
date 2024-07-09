@@ -48,6 +48,25 @@ window.addEventListener('pageshow', (e) => {
 
 
 
+document.querySelectorAll('[data-cursor-grab]').forEach((cursorGrab) => {
+    cursorGrab.style.cursor = 'grab'
+    cursorGrab.addEventListener('mousedown', function() {
+        cursorGrab.style.cursor = 'grabbing'
+    })
+
+    cursorGrab.addEventListener('mouseup', function() {
+        cursorGrab.style.cursor = 'grab'
+    })
+
+    cursorGrab.addEventListener('mouseout', function(event) {
+        if (event.buttons === 1) {
+            cursorGrab.style.cursor = 'grab'
+        }
+    })
+})
+
+
+
 function setupHeader() {
     document.querySelectorAll('#section-header').forEach((sectionHeader) => {
         const spaceHeader = sectionHeader.clientHeight

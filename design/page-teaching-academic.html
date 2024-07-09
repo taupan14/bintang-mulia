@@ -16,7 +16,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./assets/fonts/fonts.css">
 
 <style>
     #preloader {
@@ -30,6 +29,8 @@
     }
 </style>
 
+  <script type="module" crossorigin src="./assets/js/main.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/css/main.css">
 </head>
 <body>
 
@@ -187,18 +188,25 @@
 
 <main>
 
-<section id="page-header" class="relative pt-[var(--space-header)] overflow-x-clip">
+<section id="page-header" class="relative pt-[var(--space-header)]">
     <div class="pt-16 pb-8 | lg:pt-20">
         <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
             <div class="grid gap-8 | lg:grid-cols-12 lg:gap-x-16">
                 <div class="grid-item col-span-full text-center | lg:col-span-8 lg:col-start-3">
                     <div class="inline-flex items-center gap-3 mb-8">
                         <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
-                        <h6 class="uppercase leading-none tracking-wide">News & Events</h6>
+                        <h6 class="uppercase leading-none tracking-wide">Academic Overview</h6>
                     </div>
-                    <h2 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-500">The latest from our Bintang Mulia School</h2>
+                    <h2 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-500">Here are the uniqueness of our school</h2>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="relative px-1.5 my-8 | lg:px-3">
+        <div class="relative isolate">
+            <figure class="relative isolate aspect-[21/8] rounded-3xl overflow-clip">
+                <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover" data-parallax data-u-scale="1.15">
+            </figure>
         </div>
     </div>
 </section>
@@ -206,365 +214,131 @@
 <section id="page-content">
     <div class="py-16 | lg:py-20">
         <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
-            <div class="grid gap-4 gap-y-6 | lg:grid-cols-12 lg:gap-y-8">
-                <div class="grid-item col-span-full | lg:col-span-3">
-                    <article class="flex flex-col group">
-                        <figure class="relative aspect-square rounded-3xl overflow-clip">
-                            <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
-                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
-                                <div class="flex justify-end">
-                                    <div class="inline-flex">
-                                        <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
-                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </figure>
-                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
-                            <ul class="flex items-center gap-4 justify-between">
-                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
-                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
-                            </ul>
-                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
-                        </a>
-                    </article>
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-7">
+                    <div class="relative">
+                        <div class="inline-flex items-center gap-3 mb-8 | lg:absolute lg:left-0 lg:top-[clamp(0rem,14/1440*100vw,14/1440*100vw)] lg:mb-0">
+                            <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                            <h6 class="uppercase leading-none tracking-wide">Academic Overview</h6>
+                        </div>
+                        <h2 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-500 | lg:indent-48">Bintang Mulia School will prepare and educate the students</h2>
+                    </div>
                 </div>
-                <div class="grid-item col-span-full | lg:col-span-3">
-                    <article class="flex flex-col group">
-                        <figure class="relative aspect-square rounded-3xl overflow-clip">
-                            <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
-                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
-                                <div class="flex justify-end">
-                                    <div class="inline-flex">
-                                        <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
-                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </figure>
-                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
-                            <ul class="flex items-center gap-4 justify-between">
-                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
-                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
-                            </ul>
-                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
-                        </a>
-                    </article>
-                </div>
-                <div class="grid-item col-span-full | lg:col-span-3">
-                    <article class="flex flex-col group">
-                        <figure class="relative aspect-square rounded-3xl overflow-clip">
-                            <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
-                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
-                                <div class="flex justify-end">
-                                    <div class="inline-flex">
-                                        <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
-                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </figure>
-                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
-                            <ul class="flex items-center gap-4 justify-between">
-                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
-                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
-                            </ul>
-                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
-                        </a>
-                    </article>
-                </div>
-                <div class="grid-item col-span-full | lg:col-span-3">
-                    <article class="flex flex-col group">
-                        <figure class="relative aspect-square rounded-3xl overflow-clip">
-                            <img src="./assets/images/thumbnails/img04.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
-                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
-                                <div class="flex justify-end">
-                                    <div class="inline-flex">
-                                        <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
-                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </figure>
-                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
-                            <ul class="flex items-center gap-4 justify-between">
-                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
-                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
-                            </ul>
-                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
-                        </a>
-                    </article>
-                </div>
-                <div class="grid-item col-span-full | lg:col-span-3">
-                    <article class="flex flex-col group">
-                        <figure class="relative aspect-square rounded-3xl overflow-clip">
-                            <img src="./assets/images/thumbnails/img05.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
-                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
-                                <div class="flex justify-end">
-                                    <div class="inline-flex">
-                                        <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
-                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </figure>
-                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
-                            <ul class="flex items-center gap-4 justify-between">
-                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
-                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
-                            </ul>
-                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
-                        </a>
-                    </article>
-                </div>
-                <div class="grid-item col-span-full | lg:col-span-3">
-                    <article class="flex flex-col group">
-                        <figure class="relative aspect-square rounded-3xl overflow-clip">
-                            <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
-                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
-                                <div class="flex justify-end">
-                                    <div class="inline-flex">
-                                        <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
-                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </figure>
-                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
-                            <ul class="flex items-center gap-4 justify-between">
-                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
-                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
-                            </ul>
-                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
-                        </a>
-                    </article>
-                </div>
-                <div class="grid-item col-span-full | lg:col-span-3">
-                    <article class="flex flex-col group">
-                        <figure class="relative aspect-square rounded-3xl overflow-clip">
-                            <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
-                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
-                                <div class="flex justify-end">
-                                    <div class="inline-flex">
-                                        <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
-                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </figure>
-                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
-                            <ul class="flex items-center gap-4 justify-between">
-                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
-                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
-                            </ul>
-                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
-                        </a>
-                    </article>
-                </div>
-                <div class="grid-item col-span-full | lg:col-span-3">
-                    <article class="flex flex-col group">
-                        <figure class="relative aspect-square rounded-3xl overflow-clip">
-                            <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
-                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
-                                <div class="flex justify-end">
-                                    <div class="inline-flex">
-                                        <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
-                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </figure>
-                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
-                            <ul class="flex items-center gap-4 justify-between">
-                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
-                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
-                            </ul>
-                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
-                        </a>
-                    </article>
-                </div>
-                <div class="grid-item col-span-full | lg:col-span-3">
-                    <article class="flex flex-col group">
-                        <figure class="relative aspect-square rounded-3xl overflow-clip">
-                            <img src="./assets/images/thumbnails/img04.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
-                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
-                                <div class="flex justify-end">
-                                    <div class="inline-flex">
-                                        <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
-                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </figure>
-                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
-                            <ul class="flex items-center gap-4 justify-between">
-                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
-                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
-                            </ul>
-                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
-                        </a>
-                    </article>
-                </div>
-                <div class="grid-item col-span-full | lg:col-span-3">
-                    <article class="flex flex-col group">
-                        <figure class="relative aspect-square rounded-3xl overflow-clip">
-                            <img src="./assets/images/thumbnails/img01.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
-                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
-                                <div class="flex justify-end">
-                                    <div class="inline-flex">
-                                        <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
-                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </figure>
-                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
-                            <ul class="flex items-center gap-4 justify-between">
-                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
-                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
-                            </ul>
-                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
-                        </a>
-                    </article>
-                </div>
-                <div class="grid-item col-span-full | lg:col-span-3">
-                    <article class="flex flex-col group">
-                        <figure class="relative aspect-square rounded-3xl overflow-clip">
-                            <img src="./assets/images/thumbnails/img02.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
-                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
-                                <div class="flex justify-end">
-                                    <div class="inline-flex">
-                                        <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
-                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </figure>
-                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
-                            <ul class="flex items-center gap-4 justify-between">
-                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
-                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
-                            </ul>
-                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
-                        </a>
-                    </article>
-                </div>
-                <div class="grid-item col-span-full | lg:col-span-3">
-                    <article class="flex flex-col group">
-                        <figure class="relative aspect-square rounded-3xl overflow-clip">
-                            <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover transition-transform duration-700 ease-custom group-hover:scale-105">
-                            <a href="page-news-event-detail.html" class="absolute inset-0 p-4">
-                                <div class="flex justify-end">
-                                    <div class="inline-flex">
-                                        <div class="btn-circle [--bg-circle:theme('colors.primary.500')] [--text-circle:white]">
-                                            <svg class="icon icon-stroke circle-icon icon-up-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.5 6.5L6 18" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                                <path d="M8 6H18V16" stroke="#141B34" stroke-width="1.5" stroke-linecap="square"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </figure>
-                        <a href="page-news-event-detail.html" class="p-4 flex flex-col gap-2 | lg:p-6">
-                            <ul class="flex items-center gap-4 justify-between">
-                                <li><h6 class="font-medium text-dark-400">April 05, 2024</h6></li>
-                                <li><h6 class="font-medium text-dark-400">Admin</h6></li>
-                            </ul>
-                            <h5 class="text-lg leading-snug text-balance line-clamp-2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat vel asperiores ratione neque. Nesciunt!</h5>
-                        </a>
+                <div class="grid-item col-span-full | lg:col-span-5">
+                    <article>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate similique odio et exercitationem molestiae dolore mollitia ipsam, hic obcaecati repellendus incidunt! Voluptates non, sapiente cupiditate, rem tempora perspiciatis odio, quasi quod reiciendis modi doloribus culpa molestias.</p>
+                        <p>Beatae temporibus quae officiis quis velit nostrum totam voluptates veritatis est sapiente aliquam eius nisi nobis, quidem dolore rerum. Fugiat ducimus quo nam sint facilis explicabo ipsa asperiores ab, adipisci repellat molestiae voluptatum natus soluta voluptatem.</p>
                     </article>
                 </div>
             </div>
-            <div class="flex mt-16 lg:justify-center">
-                <div class="flex grow items-center gap-4 bg-dark-200 rounded-full p-1 | lg:grow-0">
-                    <a href="#!" class="btn btn-sm btn-icon btn-dark" data-hover-effect disabled>
-                        <svg class="icon icon-stroke icon-left" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 6L9 12L15 18" stroke="#141B34" stroke-width="1.5" stroke-miterlimit="16"/>
-                        </svg>
-                    </a>
-                    <h6 class="uppercase leading-none tracking-wide grow text-center | lg:hidden">Page 1 of 12</h6>
-                    <ul class="hidden items-center gap-1 | lg:flex">
-                        <li class="inline-flex">
-                            <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary is-active">
-                                <span class="text-xs font-bold">1</span>
+        </div>
+    </div>
+    
+    <div class="py-16 | lg:py-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-6">
+                    <figure class="aspect-square rounded-3xl overflow-clip | lg:h-full">
+                        <img src="./assets/images/thumbnails/img03.webp" alt="" class="size-full object-cover" data-parallax data-u-scale="1.15">
+                    </figure>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-5 lg:col-start-8">
+                    <div class="flex flex-col justify-center | lg:h-full">
+                        <div class="relative mb-8 | lg:mb-16">
+                            <div class="inline-flex items-center gap-3 mb-8">
+                                <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                                <h6 class="uppercase leading-none tracking-wide">21st Century Skills</h6>
+                            </div>
+                            <h2 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-950">Understudies to confront what's to come</h2>
+                        </div>
+                        <article class="post-entry">
+                            <p>SDH realizes that our students are now living in 21st-century era and they need to develop some skills to fulfill their calling and facing life’s challenges</p>
+                            <ul>
+                                <li><b>Communication skill</b>, amet consectetur adipisicing elit. Odit ipsa sit quia?</li>
+                                <li><b>Collaborative</b>, quibusdam saepe dignissimos voluptas, aperiam nostrum a sequi earum.</li>
+                                <li><b>Critical Thinking and Problem Solving</b>, tenetur magni aut laudantium dolorem at?</li>
+                                <li><b>Creativity</b>, praesentium rerum beatae natus necessitatibus qui deserunt! Magni.</li>
+                            </ul>
+                        </article>
+                        <div class="flex mt-8 | lg:mt-16">
+                            <a href="#!" class="btn btn-primary" data-hover-effect>
+                                Online Registration
+                                <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                                </svg>
                             </a>
-                        </li>
-                        <li class="inline-flex">
-                            <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary">
-                                <span class="text-xs font-bold">2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-16 | lg:py-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-6 lg:col-start-7">
+                    <figure class="aspect-square rounded-3xl overflow-clip | lg:h-full">
+                        <img src="./assets/images/thumbnails/img04.webp" alt="" class="size-full object-cover" data-parallax data-u-scale="1.15">
+                    </figure>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-5 lg:-order-1">
+                    <div class="flex flex-col justify-center | lg:h-full">
+                        <div class="relative mb-8 | lg:mb-16">
+                            <div class="inline-flex items-center gap-3 mb-8">
+                                <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                                <h6 class="uppercase leading-none tracking-wide">Education For Life</h6>
+                            </div>
+                            <h2 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-950">We believe that Godly character is a fruit from Holy Spirit</h2>
+                        </div>
+                        <article class="post-entry">
+                            <p>Bintang Mulia School is willing to give opportunities for the students to reflect Godly characters and faith in Christ through learning activities at school. We believe that Godly character is a fruit from Holy Spirit.</p>
+                            <p>The students need to learn, get the model and culture that will build their values, cultures and characters. Teacher needs to plan the learning intentionally where culture and Godly character’s establishment is easily growing.</p>
+                        </article>
+                        <div class="flex mt-8 | lg:mt-16">
+                            <a href="#!" class="btn btn-primary" data-hover-effect>
+                                Online Registration
+                                <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                                </svg>
                             </a>
-                        </li>
-                        <li class="inline-flex">
-                            <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary">
-                                <span class="text-xs font-bold">3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-16 | lg:py-20">
+        <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+                <div class="grid-item col-span-full | lg:col-span-6">
+                    <figure class="aspect-square rounded-3xl overflow-clip | lg:h-full">
+                        <img src="./assets/images/thumbnails/img05.webp" alt="" class="size-full object-cover" data-parallax data-u-scale="1.15">
+                    </figure>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-5 lg:col-start-8">
+                    <div class="flex flex-col justify-center | lg:h-full">
+                        <div class="relative mb-8 | lg:mb-16">
+                            <div class="inline-flex items-center gap-3 mb-8">
+                                <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                                <h6 class="uppercase leading-none tracking-wide">Our Community</h6>
+                            </div>
+                            <h2 class="font-title font-medium text-balance leading-none after:content-['.'] after:text-primary-950">Life Long Learner's Community</h2>
+                        </div>
+                        <article class="post-entry">
+                            <p>Community is a community which consists of Christ’s disciples, where teachers, staffs and other workers are called by God to be a learner, not only in this world but also to be a long life learners.</p>
+                            <p>To be involved in Bintang Mulia School community means that we will be a long life learner, that is every student who has been entrusted to us will involve in a community who have desire and calling to know, walk with, and love God and His word.</p>
+                        </article>
+                        <div class="flex mt-8 | lg:mt-16">
+                            <a href="#!" class="btn btn-primary" data-hover-effect>
+                                Online Registration
+                                <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                                </svg>
                             </a>
-                        </li>
-                        <li class="inline-flex">
-                            <a href="#!" class="btn btn-sm btn-icon btn-transparent" disabled>
-                                <span class="text-xs font-bold">...</span>
-                            </a>
-                        </li>
-                        <li class="inline-flex">
-                            <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary">
-                                <span class="text-xs font-bold">11</span>
-                            </a>
-                        </li>
-                        <li class="inline-flex">
-                            <a href="#!" class="btn btn-sm btn-icon btn-transparent [--bg-hover:theme('colors.dark.50')] [&.is-active]:before:hidden [&.is-active]:btn-primary">
-                                <span class="text-xs font-bold">12</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <a href="#!" class="btn btn-sm btn-icon btn-dark" data-hover-effect>
-                        <svg class="icon icon-stroke icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.00005 6L15 12L9 18" stroke="#141B34" stroke-width="1.5" stroke-miterlimit="16"/>
-                        </svg>
-                    </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -714,7 +488,6 @@
 
 </div><!--app-->
 
-<script type="module" src="/main.js"></script>
 
 </body>
 </html>

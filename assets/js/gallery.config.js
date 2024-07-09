@@ -9,7 +9,7 @@ document.querySelectorAll('[data-gallery]').forEach((galleryEl) => {
         plugins: [lgVideo],
         selector: '[data-gallery-item]',
         //licenseKey: 'your_license_key',
-        //zoomFromOrigin: true,
+        zoomFromOrigin: false,
         download: false,
     })
 })

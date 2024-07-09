@@ -19,6 +19,7 @@
         text-xs
         font-medium
         text-dark-400
+        pointer-events-none
         -mb-2
         transition-all
         duration-700

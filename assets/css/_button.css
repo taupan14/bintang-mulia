@@ -142,6 +142,7 @@
             }
         }
 
+        .is-active > &,
         :hover > & {
             @apply
             [clip-path:circle(50%_at_50%_50%)];

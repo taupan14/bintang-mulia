@@ -4,9 +4,9 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: '"Plus Jakarta Sans", sans-serif',
-                // sans: '"Suisse Intl", sans-serif',
-                title: '"Blacker Pro Text", serif'
+                // sans: '"Plus Jakarta Sans", sans-serif',
+                sans: '"Suisse Intl", sans-serif',
+                title: '"Suisse Neue", serif'
             },
             colors: {
                 'primary': {

@@ -1,4 +1,5 @@
 @import '_button.css';
+@import '_counter.css';
 @import '_input.css';
 @import '_gallery.css';
 
@@ -40,6 +41,7 @@
         leading-6
         text-dark-600
         bg-dark-50
+        overflow-hidden
     }
 
     b,strong {
@@ -81,7 +83,7 @@
     }
     h5 {
         @apply
-        text-[clamp(var(--fix-size,theme('fontSize.2xl')),var(--font-size,22)/1440*100vw,var(--font-size,22)/1440*100vw)]
+        text-[clamp(var(--fix-size,theme('fontSize.2xl')),var(--font-size,20.5)/1440*100vw,var(--font-size,20.5)/1440*100vw)]
         leading-[1.15]
     }
     h6 {
@@ -93,7 +95,7 @@
 
     .font-title {
         @apply
-        -tracking-[0.03em]
+        -tracking-[0.0275em]
     }
 
     .icon {

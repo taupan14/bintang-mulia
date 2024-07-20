@@ -26,6 +26,17 @@ document.querySelectorAll('.nav-header-menu').forEach((navHeaderMenu) => {
     })
 })
 
+document.querySelectorAll('#mobile-menu-toggle').forEach((mobileMenuToggle) => {
+    mobileMenuToggle.addEventListener('click', () => {
+        const isActiveMenu = document.documentElement.classList.contains('is-active-menu')
+        if(!isActiveMenu) {
+            lenis.stop()
+        } else {
+            lenis.start()
+        }
+    })
+})
+
 function setupScrollAnchor() {
     document.querySelectorAll('[data-scroll-to]').forEach((scrollToEl) => {
         const scrollToId = scrollToEl.getAttribute('data-scroll-to')

@@ -1,6 +1,7 @@
 import gsap from 'gsap'
 import CustomEase from 'gsap/CustomEase'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import SplitType from 'split-type'
 
 gsap.registerPlugin(CustomEase,ScrollTrigger)
 
@@ -67,10 +68,54 @@ document.querySelectorAll('[data-cursor-grab]').forEach((cursorGrab) => {
 
 
 
+function setupMobileMenu() {
+    const mobileMenuToggle = document.querySelector('#mobile-menu-toggle');
+    const mobileMenu = document.querySelector('#mobile-menu');
+
+    gsap.set(mobileMenu, {
+        clipPath: 'rect(0% 100% 0% 0%)',
+        display: 'none'
+    })
+
+    mobileMenuToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('is-active-menu')
+
+        const isActiveMenu = document.documentElement.classList.contains('is-active-menu')
+
+        if (isActiveMenu) {
+            gsap.to(mobileMenu, {
+                clipPath: 'rect(0% 100% 100% 0%)',
+                display: 'block',
+                duration: 0.7,
+                ease: 'custom'
+            })
+        } else {
+            gsap.to(mobileMenu, {
+                clipPath: 'rect(0% 100% 0% 0%)',
+                duration: 0.7,
+                ease: 'custom',
+                onComplete: () => {
+                    mobileMenu.style.display = 'none'
+                }
+            })
+        }
+    })
+}
+
+
+
 function setupHeader() {
     document.querySelectorAll('#section-header').forEach((sectionHeader) => {
         const spaceHeader = sectionHeader.clientHeight
         document.documentElement.style.setProperty('--space-header', `${spaceHeader}px`)
+
+        gsap.fromTo('#nav-header', { 
+            yPercent: -100,
+        }, {
+            yPercent: 0,
+            duration: 0.7,
+            ease: 'custom',
+        })
 
         const showAnim = gsap.from('#section-header', { 
             yPercent: -100,
@@ -255,6 +300,124 @@ function setupComputedSVG() {
 
 
 
+function setupSplits() {
+    const dataSplit = document.querySelectorAll('[data-split-text]')
+    dataSplit.forEach(splitEl => {
+        // Reset if needed
+        if(splitEl.anim) {
+            splitEl.anim.progress(1).kill()
+            splitEl.split.revert()
+        }
+
+        splitEl.split = new SplitType(splitEl, { 
+            // type: "lines,words,chars",
+            type: 'lines,words',
+            lineClass: 'overflow-hidden',
+            wordClass: ''
+        })
+
+        // Set up the anim
+        splitEl.anim = gsap.from(splitEl.split.words, {
+            scrollTrigger: {
+                trigger: splitEl,
+                toggleActions: 'play complete',
+                start: "top bottom",
+            },
+            yPercent: 100,
+            duration: 1, 
+            ease: 'custom', 
+            stagger: 0.02,
+        })
+
+        splitEl.anim = gsap.fromTo(splitEl.split.words, { 
+            y: 100,
+        }, {
+            scrollTrigger: {
+                trigger: splitEl,
+                toggleActions: 'play complete',
+                start: "top 80%",
+            },
+            y: 0,
+            stagger: 0.02,
+            duration: 1,
+            ease: 'custom',
+        })
+    })
+}
+
+
+
+function setupFadeUp() {
+    document.querySelectorAll('[data-fade-up]').forEach(element => {
+        let delay = parseFloat(element.getAttribute('data-delay')) || 0; // Get dynamic delay attribute value or default to 0
+        gsap.fromTo(element, {
+            opacity: 0,
+            willChange: 'opacity, transform',
+            yPercent: 100,
+        }, {
+            scrollTrigger: {
+                trigger: element,
+                toggleActions: 'play complete',
+                start: 'top bottom'
+            },
+            opacity: 1,
+            yPercent: 0,
+            duration: 0.7,
+            ease: 'custom.out',
+            delay: delay // Set the delay obtained from the dynamic attribute
+        });
+    });
+}
+
+
+
+function setupImageReveal() {
+    document.querySelectorAll('[data-image-reveal]').forEach(element => {
+        let delay = parseFloat(element.getAttribute('data-delay')) || 0;
+        gsap.fromTo(element, {
+            clipPath: 'inset(20% round 1.5rem)'
+        }, {
+            scrollTrigger: {
+                trigger: element,
+                toggleActions: 'play complete',
+                start: 'top bottom'
+            },
+            clipPath: 'inset(0% round 1.5rem)',
+            duration: 0.7,
+            ease: 'custom.out',
+            delay: delay
+        })
+    })
+}
+
+
+
+gsap.set(gsap.utils.toArray('[data-fade-in]'), {
+    opacity: 0,
+    willChange: 'opacity'
+})
+function setupFadeIn() {
+    document.querySelectorAll('[data-fade-in]').forEach(element => {
+        let delay = parseFloat(element.getAttribute('data-delay')) || 0 // Get dynamic delay attribute value or default to 0
+        gsap.fromTo(element, {
+            opacity: 0,
+            willChange: 'opacity'
+        }, {
+            scrollTrigger: {
+                trigger: element,
+                toggleActions: 'play complete',
+                start: 'top bottom'
+            },
+            opacity: 1,
+            duration: 0.7,
+            ease: 'custom',
+            delay: delay // Set the delay obtained from the dynamic attribute
+        })
+    })
+}
+
+
+
 // const tlHeroImg = gsap.timeline({
 //     scrollTrigger: {
 //         trigger: '#section-hero',
@@ -301,6 +464,96 @@ function setupInput() {
         inputElement.addEventListener('focusout', handleInput)
         inputElement.addEventListener('input', handleInput)
         inputElement.addEventListener('change', handleInput)
+    })
+}
+
+
+
+// Accordion /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function setupAccordion(){
+    const accordions = document.querySelectorAll('.accordion')
+    accordions.forEach(accordion => {
+        const accordionItems = accordion.querySelectorAll('.accordion-item')
+        const isParentAccordion = accordion.hasAttribute('data-parent')
+
+        accordionItems.forEach((item, index) => {
+            const header = item.querySelector('[data-target]')
+            const contentId = header.getAttribute('data-target')
+            const content = document.getElementById(contentId)
+
+            const contentWrapper = content.closest('.accordion-content')
+
+            const maxHeight = content.scrollHeight + 'px';
+
+            // Initialize the accordion state based on aria-hidden attribute
+            const isHidden = contentWrapper.getAttribute('aria-hidden') === 'true'
+            if (isHidden) {
+                gsap.set(content, { maxHeight: 0 })
+            } else {
+                gsap.set(content, { maxHeight: maxHeight })
+                item.classList.add('is-active')
+            }
+
+            header.addEventListener('click', () => {
+                // If it's a parent accordion, close all other items
+                if (isParentAccordion) {
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('is-active')) {
+                            const otherContentId = otherItem.querySelector('[data-target]').getAttribute('data-target')
+                            const otherContent = document.getElementById(otherContentId)
+                            gsap.to(otherContent, {
+                                maxHeight: 0,
+                                duration: 0.7,
+                                ease: 'custom',
+                                onComplete: () => {
+                                    otherItem.classList.remove('is-active');
+                                    otherContent.closest('.accordion-content').setAttribute('aria-hidden', 'true')
+                                }
+                            })
+                        }
+                    })
+                } else {
+                    // If it's not a parent accordion, close the is-active item
+                    if (item.classList.contains('is-active')) {
+                        gsap.to(content, {
+                            maxHeight: 0,
+                            duration: 0.7,
+                            ease: 'custom',
+                            onComplete: () => {
+                                item.classList.remove('is-active')
+                                contentWrapper.setAttribute('aria-hidden', 'true')
+                            }
+                        })
+                        return // Stop here to prevent opening the item again
+                    }
+                }
+
+                // Toggle the is-active class and aria-hidden attribute
+                item.classList.toggle('is-active')
+                const isActive = item.classList.contains('is-active')
+                contentWrapper.setAttribute('aria-hidden', !isActive)
+
+                // Toggle the max-height of the content using GSAP
+                if (isActive) {
+                    const maxHeight = content.scrollHeight
+                    gsap.fromTo(content, {
+                        maxHeight: 0,
+                        duration: 0.7,
+                        ease: 'custom',
+                    }, {
+                        maxHeight: maxHeight,
+                        duration: 0.7,
+                        ease: 'custom',
+                    })
+                } else {
+                    gsap.to(content, {
+                        maxHeight: 0,
+                        duration: 0.7,
+                        ease: 'custom',
+                    })
+                }
+            })
+        })
     })
 }
 
@@ -397,7 +650,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
         setupBtnHoverEffect()
         setupComputedSVG()
+        setupMobileMenu()
         setupHeader()
+        setupSplits()
+        setupFadeUp()
+        setupFadeIn()
+        setupImageReveal()
+        setupAccordion()
         setupImageFollow()
         setupInput()
         

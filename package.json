@@ -22,6 +22,7 @@
     "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5",
     "lightgallery": "^2.7.2",
+    "split-type": "^0.3.4",
     "ukiyojs": "^4.2.0"
   }
 }

@@ -97,6 +97,13 @@ document.querySelectorAll('[data-slide-about]').forEach((slideEl) => {
             pauseOnFocus: false,
             pauseOnHover: false
         },
+        breakpoints: {
+            640: {
+                focus: 'center',
+                perPage: 1.5,
+                gap: 12,
+            }
+        },
     })
     slideAbout.mount({AutoScroll})
 })
@@ -110,6 +117,13 @@ document.querySelectorAll('[data-slide-study]').forEach((slideEl) => {
         easing: 'cubic-bezier(.135,.9,.15,1)',
         arrows: false,
         pagination: false,
+        breakpoints: {
+            640: {
+                focus: 'center',
+                perPage: 1.5,
+                gap: 12,
+            }
+        },
     })
     slideStudy.mount()
 
@@ -139,6 +153,13 @@ document.querySelectorAll('[data-slide-gallery]').forEach((slideEl) => {
         pagination: false,
         autoScroll: {
             pauseOnFocus: false,
+        },
+        breakpoints: {
+            640: {
+                focus: 'center',
+                perPage: 1.5,
+                gap: 12,
+            }
         },
     })
     slideGallery.mount({AutoScroll})

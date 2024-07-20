@@ -36,7 +36,7 @@
 <div id="app">
 
 <header id="section-header" class="fixed top-0 inset-x-0 z-50">
-    <nav id="nav-header" class="relative isolate py-4 border-t-4 border-primary-500 bg-dark-50 | lg:py-6">
+    <nav id="nav-header" class="relative isolate py-4 border-t-4 border-primary-500 bg-dark-50 z-10 | lg:py-6">
         <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
             <div class="flex items-center justify-between">
                 <a href="./" class="relative inline-flex items-center gap-3 z-10">
@@ -49,7 +49,7 @@
                         <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase transition-colors duration-700 ease-custom [.is-hover-menu_&]:text-white">School</h5>
                     </div>
                 </a>
-                <div class="absolute inset-0 grid place-items-center">
+                <div class="absolute inset-0 place-items-center hidden | lg:grid">
                     <ul class="flex items-center flex-nowrap whitespace-nowrap gap-12">
                         <li class="nav-header-menu inline-flex group">
                             <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
@@ -72,8 +72,7 @@
                                                 <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
                                                     <ul class="grid grid-cols-2 gap-1 group/menu">
                                                         <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-us.html">About Us</a></li>
-                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Our Network</a></li>
-                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Our Campuses</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-our-network.html">Our Network</a></li>
                                                         <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-gallery.html">Gallery</a></li>
                                                     </ul>
                                                 </div>
@@ -89,6 +88,11 @@
                             </div>
                         </li>
                         <li class="nav-header-menu inline-flex group">
+                            <a href="page-admission.html" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
+                                Admission
+                            </a>
+                        </li>
+                        <!-- <li class="nav-header-menu inline-flex group">
                             <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
                                 Admission
                                 <div class="relative w-2.5 aspect-square before:absolute before:inset-0 before:w-px before:mx-auto before:bg-dark-400 after:absolute after:inset-0 after:h-px after:my-auto after:bg-dark-400 before:transition-colors before:duration-700 before:ease-custom [.is-hover-menu_&]:before:bg-primary-950 after:transition-colors after:duration-700 after:ease-custom [.is-hover-menu_&]:after:bg-primary-950"></div>
@@ -108,10 +112,9 @@
                                                 </div>
                                                 <div class="grid-item col-span-full | lg:col-span-5 lg:row-start-2">
                                                     <ul class="grid grid-cols-2 gap-1 group/menu">
-                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Registration Process</a></li>
-                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Test Information</a></li>
-                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Registration Guide</a></li>
-                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Visit Bintang Mulia</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="page-admission-process.html">Registration Process</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="page-admission-info.html">Test Information</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="page-admission-guide.html">Registration Guide</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -124,7 +127,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </li> -->
                         <li class="nav-header-menu inline-flex group">
                             <a href="#!" class="relative btn backdrop-blur-none btn-transparent px-0 text-dark-400 [--text-hover:theme('colors.dark.900')] gap-2 z-10 | [.is-hover-menu_&]:text-white/70 [.is-hover-menu_&]:[--text-hover:white]" data-hover-effect>
                                 Teaching & Learning
@@ -171,7 +174,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="relative flex items-center z-10">
+                <div class="relative hidden items-center z-10 | lg:flex">
                     <a href="page-contact-us.html" class="btn btn-primary [.is-hover-menu_&]:btn-white" data-hover-effect>
                         Contact Us
                         <svg class="icon icon-stroke circle-icon circle-left icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -179,9 +182,85 @@
                         </svg>
                     </a>
                 </div>
+                <div class="relative flex z-10 | lg:hidden">
+                    <button type="button" id="mobile-menu-toggle" class="btn btn-sm btn-primary">
+                        <div class="inline-flex flex-col overflow-clip h-5">
+                            <span class="text-xs leading-5 shrink-0 transition-transform duration-700 ease-custom [.is-active-menu_&]:-translate-y-full">Menu</span>
+                            <span class="text-xs leading-5 shrink-0 transition-transform duration-700 ease-custom [.is-active-menu_&]:-translate-y-full">Close</span>
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
         <div id="backdrop" class="absolute top-0 left-0 w-screen h-dvh backdrop-blur-md bg-primary-950/30 -z-[2] pointer-events-none"></div>
+    </nav>
+
+    <nav id="mobile-menu" class="fixed top-0 inset-x-0 bg-dark-50">
+        <div class="flex flex-col h-dvh pt-[var(--space-header)]">
+            <div class="h-full flex flex-col max-w-screen-sm mx-auto px-3 shrink-0 overflow-auto | lg:px-12 | 2xl:px-0" data-lenis-prevent>
+                <div class="py-8 shrink-0">
+                    <div class="inline-flex items-center gap-3 mb-8">
+                        <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
+                        <h6 class="uppercase leading-none tracking-wide">Navigation</h6>
+                    </div>
+                    <ul class="accordion flex flex-col gap-4 [counter-reset:numeric]" data-parent>
+                        <li class="accordion-item overflow-clip [counter-increment:numeric]">
+                            <a href="javascript:;" class="relative inline-flex gap-4" data-target="accordion-1">
+                                <h6 class="before:content-[counter(numeric,decimal-leading-zero)] before:text-dark-400"></h6>
+                                <h1 class="font-title font-medium leading-none">About Us</h1>
+                            </a>
+                            <div id="accordion-1" class="accordion-content overflow-clip" aria-hidden="true">
+                                <ul class="flex flex-col gap-2 py-4 pl-8">
+                                    <li><a href="page-about-us.html" class="text-lg font-medium">About Us</a></li>
+                                    <li><a href="page-about-our-network.html" class="text-lg font-medium">Our Network</a></li>
+                                    <li><a href="page-about-gallery.html" class="text-lg font-medium">Gallery</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="overflow-clip [counter-increment:numeric]">
+                            <a href="page-admission.html" class="relative inline-flex gap-4">
+                                <h6 class="before:content-[counter(numeric,decimal-leading-zero)] before:text-dark-400"></h6>
+                                <h1 class="font-title font-medium leading-none">Admission</h1>
+                            </a>
+                        </li>
+                        <li class="accordion-item overflow-clip [counter-increment:numeric]">
+                            <a href="javascript:;" class="relative inline-flex gap-4" data-target="accordion-2">
+                                <h6 class="before:content-[counter(numeric,decimal-leading-zero)] before:text-dark-400"></h6>
+                                <h1 class="font-title font-medium leading-none">Teaching & Learning</h1>
+                            </a>
+                            <div id="accordion-2" class="accordion-content overflow-clip" aria-hidden="true">
+                                <ul class="flex flex-col gap-2 py-4 pl-8">
+                                    <li><a href="page-teaching-academic.html" class="text-lg font-medium">Academic Overview</a></li>
+                                    <li><a href="page-teaching-kindergarten.html" class="text-lg font-medium">Kindergarten</a></li>
+                                    <li><a href="page-teaching-primary-school.html" class="text-lg font-medium">Primary School</a></li>
+                                    <li><a href="page-teaching-junior-school.html" class="text-lg font-medium">Junior School</a></li>
+                                    <li><a href="page-teaching-senior-school.html" class="text-lg font-medium">Senior School</a></li>
+                                    <li><a href="page-teaching-elective.html" class="text-lg font-medium">Elective Class</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="overflow-clip [counter-increment:numeric]">
+                            <a href="page-news-event.html" class="relative inline-flex gap-4">
+                                <h6 class="before:content-[counter(numeric,decimal-leading-zero)] before:text-dark-400"></h6>
+                                <h1 class="font-title font-medium leading-none">News & Event</h1>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="py-3 mt-auto">
+                    <a href="page-contact-us.html" class="w-full btn btn-primary is-active" data-hover-effect>
+                        Contact Us
+                        <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="py-3 shrink-0">
+                    <h6 class="uppercase leading-none tracking-wide text-dark-400">Copyright © 2024</h6>
+                    <h6 class="uppercase leading-none tracking-wide text-dark-400">Bintang Mulia School</h6>
+                </div>
+            </div>
+        </div>
     </nav>
 </header>
 
@@ -191,13 +270,13 @@
     <div class="pt-16 pb-8 | lg:pt-20">
         <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
             <div class="grid gap-8 | lg:grid-cols-12 lg:gap-x-16">
-                <div class="grid-item col-span-full | lg:col-span-8">
+                <div class="grid-item col-span-full text-center | lg:col-span-10 lg:text-start">
                     <div class="relative">
-                        <div class="inline-flex items-center gap-3 mb-6 | lg:absolute lg:left-0 lg:top-[clamp(1rem,32/1440*100vw,32/1440*100vw)] lg:mb-0">
+                        <div class="inline-flex items-center gap-3 mb-6 | lg:absolute lg:left-0 lg:top-[clamp(1rem,32/1440*100vw,32/1440*100vw)] lg:mb-0" data-fade-in>
                             <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
                             <h6 class="uppercase leading-none tracking-wide">Contact Us</h6>
                         </div>
-                        <h2 class="font-title font-medium text-balance leading-none [--font-size:128] after:content-['.'] after:text-primary-500 | lg:[--font-size:96] lg:indent-40">We’d love to hear from you</h2>
+                        <h2 class="font-title font-medium text-balance leading-none [--fix-size:theme('fontSize.5xl')] [--font-size:128] | lg:[--font-size:92] lg:[&>*:first-child]:pl-40" data-split-text>We’d love to hear from you<span class="text-primary-500">.</span></h2>
                     </div>
                 </div>
             </div>
@@ -209,7 +288,7 @@
     <div class="py-16 | lg:py-20">
         <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
             <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
-                <div class="grid-item col-span-full | lg:col-span-4">
+                <div class="grid-item col-span-full text-center | lg:col-span-4 lg:text-start">
                     <article class="text-balance mb-8 | lg:mb-16">
                         <p>For general enquiries, please fill out the form to get in touch. Alternatively, if you know your project details — head over to our project planner for a more refined step-by-step process.</p>
                     </article>
@@ -257,7 +336,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col gap-4 mt-16 text-center | lg:flex-row lg:items-center lg:justify-between lg:text-start">
-                        <p class="mb-0">By submitting this form I accept the <a href="#!" target="_blank" class="link font-semibold text-dark-900">Privacy Policy</a> of this site.</p>
+                        <p class="mb-0">By submitting this form I accept the <a href="page-privacy.html" target="_blank" class="link font-semibold text-dark-900">Privacy Policy</a> of this site.</p>
                         <button type="button" class="btn btn-primary" data-hover-effect>
                             Send a message
                             <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -288,8 +367,8 @@
                             </div>
                             <h2 class="font-title font-medium text-balance leading-none text-white after:content-['.'] after:text-primary-950">Transformative Learning Community Today</h2>
                         </div>
-                        <div class="grid-item col-span-full | lg:col-span-6 lg:row-start-2">
-                            <a href="#!" class="btn btn-white" data-hover-effect>
+                        <div class="grid-item col-span-full text-center | lg:col-span-6 lg:row-start-2 lg:text-start">
+                            <a href="page-online-registration.html" class="btn btn-white" data-hover-effect>
                                 Online Registration
                                 <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
@@ -302,7 +381,7 @@
                         <div class="absolute top-0 left-0 aspect-square rounded-full bg-primary-400/50 w-[calc(20rem+20vw)] -translate-x-1/2 -translate-y-1/2"></div>
                     </div>
                 </div>
-                <div class="absolute inset-y-0 right-0 left-[55%] pointer-events-none">
+                <div class="absolute inset-y-0 right-0 left-[60%] pointer-events-none hidden | lg:block">
                     <figure class="size-full">
                         <img src="./assets/images/online-registration.webp" alt="" class="size-full object-contain">
                     </figure>
@@ -313,13 +392,13 @@
     </section>
     <section id="footer-top" class="pb-20 pt-8 bg-primary-950 | lg:pb-24">
         <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
-            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
+            <div class="grid gap-16 | lg:grid-cols-12">
                 <div class="grid-item col-span-full | lg:col-span-4">
                     <a href="./" class="inline-flex items-center gap-3">
                         <img src="./assets/images/logo/logo-icon-bintang-mulia-default.svg" alt="" class="size-10 object-contain shrink-0">
                         <div class="inline-flex flex-col">
-                            <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase text-white">Bintang Mulia</h5>
-                            <h5 class="font-title text-base tracking-normal leading-none font-bold uppercase text-white">School</h5>
+                            <h5 class="font-title text-base tracking-normal leading-none font-medium uppercase text-white">Bintang Mulia</h5>
+                            <h5 class="font-title text-base tracking-normal leading-none font-medium uppercase text-white">School</h5>
                         </div>
                     </a>
                 </div>
@@ -328,8 +407,7 @@
                     <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-4 pb-4 border-b border-white/10">About Us</h6>
                     <ul class="flex flex-col gap-1 group/menu">
                         <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-us.html">About Us</a></li>
-                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Our Network</a></li>
-                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="#!">Our Campuses</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-out-network.html">Our Network</a></li>
                         <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-gallery.html">Gallery</a></li>
                         <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-news-event.html">News & Event</a></li>
                     </ul>

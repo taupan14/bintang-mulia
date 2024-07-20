@@ -23,6 +23,12 @@
     src: url("SuisseIntl-SemiBold.woff2") format("woff2");
 }
 @font-face {
+    font-family: "Suisse Neue";
+    font-style: normal;
+    font-weight: 500;
+    src: url("SuisseNeue-Medium.woff2") format("woff2");
+}
+/* @font-face {
     font-family: "Blacker Pro Text";
     font-style: normal;
     font-weight: 700;
@@ -39,4 +45,4 @@
     font-style: normal;
     font-weight: 500;
     src: url("Blacker-Pro-Text-Medium.woff2") format("woff2");
-}
+} */

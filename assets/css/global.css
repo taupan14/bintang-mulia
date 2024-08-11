@@ -12,7 +12,7 @@
         @apply
         min-w-0
         min-h-0
-        scroll-pt-[var(--space-header)]
+        scroll-pt-[calc(var(--space-header)+2rem)]
 
         selection:bg-primary-500
         selection:text-black
@@ -41,13 +41,13 @@
         leading-6
         text-dark-600
         bg-dark-50
-        overflow-hidden
+        /* overflow-hidden */
     }
 
     b,strong {
         @apply
         font-bold
-        text-dark-900
+        text-[var(--bold-color,theme('colors.dark.950'))]
     }
 
     p {
@@ -288,10 +288,13 @@
                 before:w-1.5
                 before:h-1.5
                 before:rounded-full
-                before:bg-primary-500;
+                before:bg-[var(--dot-color,theme('colors.primary.500'))];
                 ul {
                     @apply
-                    !my-2.5
+                    !my-2.5;
+                    li {
+                        --dot-color: theme('colors.dark.400');
+                    }
                 }
             }
         }

@@ -68,6 +68,14 @@ document.querySelectorAll('[data-cursor-grab]').forEach((cursorGrab) => {
 
 
 
+document.querySelectorAll('#btn-language').forEach((btnLang) => [
+    btnLang.addEventListener('click', () => {
+        document.documentElement.classList.toggle('is-show-language')
+    })
+])
+
+
+
 function setupMobileMenu() {
     const mobileMenuToggle = document.querySelector('#mobile-menu-toggle');
     const mobileMenu = document.querySelector('#mobile-menu');
@@ -445,25 +453,38 @@ function handleInput(event) {
 function setupInput() {
     document.querySelectorAll('.js-textarea').forEach((textareaEl) => {
         textareaEl.addEventListener('input', () => {
-            textareaEl.style.height = 'auto'
-            textareaEl.style.height = textareaEl.scrollHeight + 'px'
-        })
-    })
+            textareaEl.style.height = 'auto';
+            textareaEl.style.height = textareaEl.scrollHeight + 'px';
+        });
+    });
 
     document.querySelectorAll('.c-input').forEach((inputElement) => {
-        if (inputElement.value.length > 0) {
-            inputElement.parentNode.classList.add('is-focus')
-        } else {
-            inputElement.parentNode.classList.remove('is-focus')
+        if (inputElement && inputElement.value) {
+            if (inputElement.value.length > 0) {
+                inputElement.parentNode.classList.add('is-focus');
+            } else {
+                inputElement.parentNode.classList.remove('is-focus');
+            }
         }
-    
+
+        function handleInput(event) {
+            const el = event.target;
+            if (el && el.value) {
+                if (el.value.length > 0) {
+                    el.parentNode.classList.add('is-focus');
+                } else {
+                    el.parentNode.classList.remove('is-focus');
+                }
+            }
+        }
+
         inputElement.addEventListener('focus', () => {
-            inputElement.parentNode.classList.add('is-focus')
-        })
-        
-        inputElement.addEventListener('focusout', handleInput)
-        inputElement.addEventListener('input', handleInput)
-        inputElement.addEventListener('change', handleInput)
+            inputElement.parentNode.classList.add('is-focus');
+        });
+
+        inputElement.addEventListener('focusout', handleInput);
+        inputElement.addEventListener('input', handleInput);
+        inputElement.addEventListener('change', handleInput);
     })
 }
 
@@ -656,9 +677,9 @@ window.addEventListener('DOMContentLoaded', () => {
         setupFadeUp()
         setupFadeIn()
         setupImageReveal()
+        setupInput()
         setupAccordion()
         setupImageFollow()
-        setupInput()
         
     }, 500)
 })

@@ -34,7 +34,7 @@ function showModal(modal) {
 
     if (mediaQuery.matches) {
         gsap.to(modal.querySelector('[data-modal-content]'), {
-            clipPath: 'inset(0% round 1rem)',
+            clipPath: 'inset(0% round 1.5rem)',
             duration: 0.7,
             ease: 'custom'
         })
@@ -60,7 +60,7 @@ function hideModal(modal) {
 
     if (mediaQuery.matches) {
         gsap.to(modal.querySelector('[data-modal-content]'), {
-            clipPath: 'inset(50% round 1rem)',
+            clipPath: 'inset(50% round 1.5rem)',
             duration: 0.7,
             ease: 'custom',
             onComplete: () => {
@@ -113,7 +113,7 @@ export function initializeModals() {
     modals.forEach(modal => {
         if (mediaQuery.matches) {
             gsap.set(modal.querySelector('[data-modal-content]'), {
-                clipPath: 'inset(50% round 1rem)'
+                clipPath: 'inset(50% round 1.5rem)'
             })
         } else {
             gsap.set(modal.querySelector('[data-modal-content]'), {

@@ -73,6 +73,7 @@
                                                     <ul class="grid grid-cols-2 gap-1 group/menu">
                                                         <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-us.html">About Us</a></li>
                                                         <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-our-network.html">Our Network</a></li>
+                                                        <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-structure.html">Structure Organization</a></li>
                                                         <li class="inline-flex"><a class="link [--line-hover:theme('colors.primary.950')] text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-gallery.html">Gallery</a></li>
                                                     </ul>
                                                 </div>
@@ -247,7 +248,17 @@
                         </li>
                     </ul>
                 </div>
-                <div class="py-3 mt-auto">
+                <div class="py-3 shrink-0 mt-auto">
+                    <div class="flex items-center justify-between">
+                        <h6 class="uppercase leading-none tracking-wide text-dark-400">Change Language</h6>
+                        <div class="flex items-center gap-1">
+                            <a href="#!" class="btn btn-icon [&.is-active]:btn-primary is-active">EN</a>
+                            <a href="#!" class="btn btn-icon">ID</a>
+                            <a href="#!" class="btn btn-icon">CN</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-3 shrink-0">
                     <a href="page-contact-us.html" class="w-full btn btn-primary is-active" data-hover-effect>
                         Contact Us
                         <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -266,8 +277,8 @@
 
 <main>
 
-<section id="page-header" class="relative pt-[var(--space-header)] overflow-x-clip">
-    <div class="pt-16 pb-8 | lg:pt-20">
+<section id="page-header" class="relative pt-[var(--space-header)]">
+    <div class="relative pt-16 pb-8 | lg:pt-20">
         <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
             <div class="grid gap-8 | lg:grid-cols-12 lg:gap-x-16">
                 <div class="grid-item col-span-full text-center | lg:col-span-10 lg:text-start">
@@ -276,76 +287,591 @@
                             <div class="w-1.5 aspect-square bg-primary-500 rounded-full shrink-0"></div>
                             <h6 class="uppercase leading-none tracking-wide">Registration</h6>
                         </div>
-                        <h2 class="font-title font-medium text-balance leading-none [--fix-size:theme('fontSize.5xl')] [--font-size:128] | lg:[--font-size:92] lg:[&>*:first-child]:pl-40" data-split-text>Beyond Education Touching Lives<span class="text-primary-500">.</span></h2>
+                        <h2 class="font-title font-medium text-balance leading-none [--fix-size:theme('fontSize.5xl')] [--font-size:128] | lg:[--font-size:92] lg:[&>*:first-child]:pl-40" data-split-text>Start Your Process<span class="text-primary-500">.</span></h2>
                     </div>
                 </div>
             </div>
         </div>
+<div class="absolute inset-x-0 top-0 -bottom-20 bg-[linear-gradient(90deg,theme('colors.dark.950/0.15')_1px,transparent_0),linear-gradient(180deg,theme('colors.dark.950/0.15')_1px,transparent_0)] bg-[length:calc(100vw/8)_calc(100vw/8)] [mask-image:radial-gradient(farthest-corner,black,rgba(0,0,0,.5),transparent_80%)] -z-[1] | lg:bg-[length:calc(100vw/20)_calc(100vw/20)]"></div>
     </div>
 </section>
 
 <section id="page-content">
-    <div class="py-16 | lg:py-20">
+    <div class="py-6 | lg:py-20">
         <div class="max-w-screen-2xl mx-auto px-3 | lg:px-12 | 2xl:px-0">
-            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16">
-                <div class="grid-item col-span-full | lg:col-span-8 lg:col-start-3">
-                    <div class="grid gap-6 | lg:grid-cols-2 lg:gap-y-8">
-                        <div class="grid-item col-span-full | lg:col-span-1">
-                            <div class="relative flex flex-col pt-2">
-                                <label class="c-label c-fix-label">Choose a School</label>
-                                <select class="c-input">
-                                    <option selected disabled></option>
-                                    <option>Primary School</option>
-                                    <option>Secondary School</option>
-                                </select>
-                                <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
-                            </div>
-                        </div>
-                        <div class="grid-item col-span-full | lg:col-span-1">
-                            <div class="relative flex flex-col pt-2">
-                                <label class="c-label c-fix-label">Full Name <span class="opacity-50">(Parent)</span></label>
-                                <input type="text" class="c-input">
-                                <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
-                            </div>
-                        </div>
-                        <div class="grid-item col-span-full | lg:col-span-1">
-                            <div class="relative flex flex-col pt-2">
-                                <label class="c-label c-fix-label">Email Address</label>
-                                <input type="email" class="c-input">
-                                <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
-                            </div>
-                        </div>
-                        <div class="grid-item col-span-full | lg:col-span-1">
-                            <div class="relative flex flex-col pt-2">
-                                <label class="c-label c-fix-label">Phone <span class="opacity-50">(Optional)</span></label>
-                                <input type="number" inputmode="numeric" class="c-input">
-                                <!-- <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div> -->
-                            </div>
-                        </div>
-                        <div class="grid-item col-span-full | lg:col-span-1">
-                            <div class="relative flex flex-col pt-2">
-                                <label class="c-label c-fix-label">Password</label>
-                                <input type="password" class="c-input">
-                                <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
-                            </div>
-                        </div>
-                        <div class="grid-item col-span-full | lg:col-span-1">
-                            <div class="relative flex flex-col pt-2">
-                                <label class="c-label c-fix-label">Confirm Password</label>
-                                <input type="password" class="c-input">
-                                <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
-                            </div>
-                        </div>
+            <div class="grid gap-8 | lg:grid-cols-12 lg:gap-16" data-tabs>
+                <div class="grid-item col-span-full | lg:col-span-3">
+                    <div class="sticky top-0 pt-[var(--space-header)] -mt-[var(--space-header)]">
+                        <ul class="flex flex-col divide-y divide-dark-950/30">
+                            <li class="grid py-2 firs:pt-0 last:pb-0">
+                                <a href="javascript:;" class="btn btn-transparent pl-0 justify-start [--bg-circle:theme('colors.primary.500')] [&.is-active]:text-dark-950 is-active" data-hover-effect data-tab-target="tab-kindergarten" data-scroll-to="tab-kindergarten">
+                                    Kindergarten
+                                    <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="grid py-2 firs:pt-0 last:pb-0">
+                                <a href="javascript:;" class="btn btn-transparent pl-0 justify-start [--bg-circle:theme('colors.primary.500')] [&.is-active]:text-dark-950" data-hover-effect data-tab-target="tab-primary" data-scroll-to="tab-primary">
+                                    Primary School
+                                    <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="grid py-2 firs:pt-0 last:pb-0">
+                                <a href="javascript:;" class="btn btn-transparent pl-0 justify-start [--bg-circle:theme('colors.primary.500')] [&.is-active]:text-dark-950" data-hover-effect data-tab-target="tab-junior" data-scroll-to="tab-junior">
+                                    Junior School
+                                    <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="grid py-2 firs:pt-0 last:pb-0">
+                                <a href="javascript:;" class="btn btn-transparent pl-0 justify-start [--bg-circle:theme('colors.primary.500')] [&.is-active]:text-dark-950" data-hover-effect data-tab-target="tab-senior" data-scroll-to="tab-senior">
+                                    Senior School
+                                    <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="flex flex-col gap-4 mt-16 text-center | lg:flex-row lg:items-center lg:justify-between lg:text-start">
-                        <p class="mb-0">By submitting this form I accept the <a href="page-privacy.html" target="_blank" class="link font-semibold text-dark-900">Privacy Policy</a> of this site.</p>
-                        <button type="button" class="btn btn-primary" data-hover-effect>
-                            Register Now
-                            <svg class="icon icon-stroke circle-icon circle-right icon-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 12L19.5715 12M15.0001 17L20 12L15 7" stroke="#141B34" stroke-width="1.5"/>
-                            </svg>
-                        </button>
-                    </div>
+                </div>
+                <div class="grid-item col-span-full | lg:col-span-8 lg:col-start-5" data-tabs-content>
+
+                    <div id="tab-kindergarten" class="flex-col gap-8 hidden [&.is-active]:flex is-active | lg:gap-16" data-tab-content aria-hidden="false">
+                        <div class="flex flex-col [counter-reset:numeric] divide-y divide-dark-950/30">
+                            <div class="relative py-8 [counter-increment:numeric]  first:pt-0 last:pb-0 | lg:py-16">
+                                <div class="mb-8">
+                                    <h6 class="before:content-[counter(numeric,decimal-leading-zero)'.'] mb-2"></h6>
+                                    <h4 class="font-title font-medium text-balance mb-8 after:content-['.'] after:text-primary-500 | lg:pr-[30%]">About Kindergarten</h4>
+                                </div>
+                                <article class="post-entry">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam assumenda ducimus aperiam eveniet deserunt temporibus modi sit consequuntur tenetur inventore numquam possimus earum ipsa rerum id quas, molestias veritatis enim distinctio consequatur. Soluta ratione cumque voluptatum doloribus esse illum. Dolorem, beatae sapiente!</p>
+                                    <p>Accusamus quos molestiae expedita eius voluptatum veniam adipisci sed optio alias, harum quaerat culpa ab atque maxime explicabo odio sit ipsam esse similique tenetur? Incidunt maiores velit nesciunt laudantium doloribus modi inventore commodi iure sit alias? Laborum odit culpa inventore dolorem reiciendis.</p>
+                                    <p>Dignissimos ut eum odit est minima ad recusandae et doloremque assumenda amet sit beatae similique, facere velit expedita, possimus magnam quod, ipsam iusto rem vitae qui! Fuga neque facere incidunt accusamus atque necessitatibus iusto esse saepe eum rem numquam, distinctio fugit veniam.</p>
+                                    <p>Accusamus autem vel voluptatibus dolores excepturi perspiciatis ipsam nisi, consequatur quisquam officiis doloremque consequuntur temporibus ducimus. Consectetur placeat libero dolorum repellendus similique praesentium totam, dicta sit maiores. Eaque voluptate iure optio, eligendi quibusdam debitis repellat necessitatibus dolorum. Deleniti voluptatem facilis repellat repellendus?</p>
+                                </article>
+                                <div class="grid gap-6 mt-8 | lg:grid-cols-2 lg:gap-y-8">
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Choose a School</label>
+                                            <select class="c-input js-select">
+                                                <option selected disabled></option>
+                                                <option>Primary School</option>
+                                                <option>Secondary School</option>
+                                            </select>
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Full Name <span class="opacity-50">(Parent)</span></label>
+                                            <input type="text" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Email Address</label>
+                                            <input type="email" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative py-8 [counter-increment:numeric]  first:pt-0 last:pb-0 | lg:py-16">
+                                <div class="mb-8">
+                                    <h6 class="before:content-[counter(numeric,decimal-leading-zero)'.'] mb-2"></h6>
+                                    <h4 class="font-title font-medium text-balance mb-8 after:content-['.'] after:text-primary-500 | lg:pr-[30%]">Bintang Mulia Admission Applications</h4>
+                                </div>
+                                <article class="post-entry">
+                                    <ul>
+                                        <li><b>August 1</b>
+                                            <ul>
+                                                <li>All candidates applying for first-year admission to Dartmouth must use the Common App. Add Dartmouth to the "My Colleges" section and you will be on your way. Check our Eligibility Guidelines to help guide what type of applicant you are.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <div class="grid gap-6 mt-8 | lg:grid-cols-2 lg:gap-y-8">
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Phone <span class="opacity-50">(Optional)</span></label>
+                                            <input type="number" inputmode="numeric" class="c-input">
+                                            <!-- <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div> -->
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Password</label>
+                                            <input type="password" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Confirm Password</label>
+                                            <input type="password" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative py-8 [counter-increment:numeric]  first:pt-0 last:pb-0 | lg:py-16">
+                                <div class="mb-8">
+                                    <h6 class="before:content-[counter(numeric,decimal-leading-zero)'.'] mb-2"></h6>
+                                    <h4 class="font-title font-medium text-balance mb-8 after:content-['.'] after:text-primary-500 | lg:pr-[30%]">Decision Timeline</h4>
+                                </div>
+                                <article class="post-entry">
+                                    <ul>
+                                        <li><b>November 1</b>
+                                            <ul>
+                                                <li>Early Decision Application due</li>
+                                                <li>Financial Aid application materials due</li>
+                                                <li>Application Fee or Fee Waiver due</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Early November</b>
+                                            <ul>
+                                                <li>Last date for testing.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Mid November</b>
+                                            <ul>
+                                                <li>Respond to (optional) Alumni Interview invitation</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Late November</b>
+                                            <ul>
+                                                <li>Quarter grades/progress reports that include grades from the senior year due</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Mid December</b>
+                                            <ul>
+                                                <li>Early Decision admission notification. Financial aid tentative award notification for admitted financial aid applicants.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Late December</b>
+                                            <ul>
+                                                <li>Intent to enroll deadline</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>January to February</b>
+                                            <ul>
+                                                <li>Admission notification for Early Decision deferred applicants. Financial aid award notification for admitted financial aid applicants.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>On or before April 1</b>
+                                            <ul>
+                                                <li>Early Decision deferred applicants should submit a brief update regarding recent notable academic, extracurricular, and/or personal accomplishments; some applicants may wish to submit other material, such as new standardized exam scores and/or an additional letter of recommendation.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                    </div><!--tab-kindergarten-->
+
+                    <div id="tab-primary" class="flex-col gap-8 hidden [&.is-active]:flex | lg:gap-16" data-tab-content aria-hidden="true">
+                        <div class="flex flex-col [counter-reset:numeric] divide-y divide-dark-950/30">
+                            <div class="relative py-8 [counter-increment:numeric]  first:pt-0 last:pb-0 | lg:py-16">
+                                <div class="mb-8">
+                                    <h6 class="before:content-[counter(numeric,decimal-leading-zero)'.'] mb-2"></h6>
+                                    <h4 class="font-title font-medium text-balance mb-8 after:content-['.'] after:text-primary-500 | lg:pr-[30%]">About Primary School</h4>
+                                </div>
+                                <article class="post-entry">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam assumenda ducimus aperiam eveniet deserunt temporibus modi sit consequuntur tenetur inventore numquam possimus earum ipsa rerum id quas, molestias veritatis enim distinctio consequatur. Soluta ratione cumque voluptatum doloribus esse illum. Dolorem, beatae sapiente!</p>
+                                    <p>Accusamus quos molestiae expedita eius voluptatum veniam adipisci sed optio alias, harum quaerat culpa ab atque maxime explicabo odio sit ipsam esse similique tenetur? Incidunt maiores velit nesciunt laudantium doloribus modi inventore commodi iure sit alias? Laborum odit culpa inventore dolorem reiciendis.</p>
+                                </article>
+                                <div class="grid gap-6 mt-8 | lg:grid-cols-2 lg:gap-y-8">
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Choose a School</label>
+                                            <select class="c-input js-select">
+                                                <option selected disabled></option>
+                                                <option>Primary School</option>
+                                                <option>Secondary School</option>
+                                            </select>
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Full Name <span class="opacity-50">(Parent)</span></label>
+                                            <input type="text" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Email Address</label>
+                                            <input type="email" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative py-8 [counter-increment:numeric]  first:pt-0 last:pb-0 | lg:py-16">
+                                <div class="mb-8">
+                                    <h6 class="before:content-[counter(numeric,decimal-leading-zero)'.'] mb-2"></h6>
+                                    <h4 class="font-title font-medium text-balance mb-8 after:content-['.'] after:text-primary-500 | lg:pr-[30%]">Bintang Mulia Admission Applications</h4>
+                                </div>
+                                <article class="post-entry">
+                                    <ul>
+                                        <li><b>August 1</b>
+                                            <ul>
+                                                <li>All candidates applying for first-year admission to Dartmouth must use the Common App. Add Dartmouth to the "My Colleges" section and you will be on your way. Check our Eligibility Guidelines to help guide what type of applicant you are.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <div class="grid gap-6 mt-8 | lg:grid-cols-2 lg:gap-y-8">
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Phone <span class="opacity-50">(Optional)</span></label>
+                                            <input type="number" inputmode="numeric" class="c-input">
+                                            <!-- <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div> -->
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Password</label>
+                                            <input type="password" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Confirm Password</label>
+                                            <input type="password" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative py-8 [counter-increment:numeric]  first:pt-0 last:pb-0 | lg:py-16">
+                                <div class="mb-8">
+                                    <h6 class="before:content-[counter(numeric,decimal-leading-zero)'.'] mb-2"></h6>
+                                    <h4 class="font-title font-medium text-balance mb-8 after:content-['.'] after:text-primary-500 | lg:pr-[30%]">Decision Timeline</h4>
+                                </div>
+                                <article class="post-entry">
+                                    <ul>
+                                        <li><b>November 1</b>
+                                            <ul>
+                                                <li>Early Decision Application due</li>
+                                                <li>Financial Aid application materials due</li>
+                                                <li>Application Fee or Fee Waiver due</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Early November</b>
+                                            <ul>
+                                                <li>Last date for testing.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Mid November</b>
+                                            <ul>
+                                                <li>Respond to (optional) Alumni Interview invitation</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Late November</b>
+                                            <ul>
+                                                <li>Quarter grades/progress reports that include grades from the senior year due</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Mid December</b>
+                                            <ul>
+                                                <li>Early Decision admission notification. Financial aid tentative award notification for admitted financial aid applicants.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Late December</b>
+                                            <ul>
+                                                <li>Intent to enroll deadline</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>January to February</b>
+                                            <ul>
+                                                <li>Admission notification for Early Decision deferred applicants. Financial aid award notification for admitted financial aid applicants.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>On or before April 1</b>
+                                            <ul>
+                                                <li>Early Decision deferred applicants should submit a brief update regarding recent notable academic, extracurricular, and/or personal accomplishments; some applicants may wish to submit other material, such as new standardized exam scores and/or an additional letter of recommendation.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                    </div><!--tab-primary-->
+
+                    <div id="tab-junior" class="flex-col gap-8 hidden [&.is-active]:flex | lg:gap-16" data-tab-content aria-hidden="true">
+                        <div class="flex flex-col [counter-reset:numeric] divide-y divide-dark-950/30">
+                            <div class="relative py-8 [counter-increment:numeric]  first:pt-0 last:pb-0 | lg:py-16">
+                                <div class="mb-8">
+                                    <h6 class="before:content-[counter(numeric,decimal-leading-zero)'.'] mb-2"></h6>
+                                    <h4 class="font-title font-medium text-balance mb-8 after:content-['.'] after:text-primary-500 | lg:pr-[30%]">About Junior School</h4>
+                                </div>
+                                <article class="post-entry">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam assumenda ducimus aperiam eveniet deserunt temporibus modi sit consequuntur tenetur inventore numquam possimus earum ipsa rerum id quas, molestias veritatis enim distinctio consequatur. Soluta ratione cumque voluptatum doloribus esse illum. Dolorem, beatae sapiente!</p>
+                                    <p>Accusamus quos molestiae expedita eius voluptatum veniam adipisci sed optio alias, harum quaerat culpa ab atque maxime explicabo odio sit ipsam esse similique tenetur? Incidunt maiores velit nesciunt laudantium doloribus modi inventore commodi iure sit alias? Laborum odit culpa inventore dolorem reiciendis.</p>
+                                    <p>Dignissimos ut eum odit est minima ad recusandae et doloremque assumenda amet sit beatae similique, facere velit expedita, possimus magnam quod, ipsam iusto rem vitae qui! Fuga neque facere incidunt accusamus atque necessitatibus iusto esse saepe eum rem numquam, distinctio fugit veniam.</p>
+                                    <p>Accusamus autem vel voluptatibus dolores excepturi perspiciatis ipsam nisi, consequatur quisquam officiis doloremque consequuntur temporibus ducimus. Consectetur placeat libero dolorum repellendus similique praesentium totam, dicta sit maiores. Eaque voluptate iure optio, eligendi quibusdam debitis repellat necessitatibus dolorum. Deleniti voluptatem facilis repellat repellendus?</p>
+                                </article>
+                                <div class="grid gap-6 mt-8 | lg:grid-cols-2 lg:gap-y-8">
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Choose a School</label>
+                                            <select class="c-input js-select">
+                                                <option selected disabled></option>
+                                                <option>Primary School</option>
+                                                <option>Secondary School</option>
+                                            </select>
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Full Name <span class="opacity-50">(Parent)</span></label>
+                                            <input type="text" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Email Address</label>
+                                            <input type="email" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative py-8 [counter-increment:numeric]  first:pt-0 last:pb-0 | lg:py-16">
+                                <div class="mb-8">
+                                    <h6 class="before:content-[counter(numeric,decimal-leading-zero)'.'] mb-2"></h6>
+                                    <h4 class="font-title font-medium text-balance mb-8 after:content-['.'] after:text-primary-500 | lg:pr-[30%]">Bintang Mulia Admission Applications</h4>
+                                </div>
+                                <article class="post-entry">
+                                    <ul>
+                                        <li><b>August 1</b>
+                                            <ul>
+                                                <li>All candidates applying for first-year admission to Dartmouth must use the Common App. Add Dartmouth to the "My Colleges" section and you will be on your way. Check our Eligibility Guidelines to help guide what type of applicant you are.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <div class="grid gap-6 mt-8 | lg:grid-cols-2 lg:gap-y-8">
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Phone <span class="opacity-50">(Optional)</span></label>
+                                            <input type="number" inputmode="numeric" class="c-input">
+                                            <!-- <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div> -->
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Password</label>
+                                            <input type="password" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Confirm Password</label>
+                                            <input type="password" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative py-8 [counter-increment:numeric]  first:pt-0 last:pb-0 | lg:py-16">
+                                <div class="mb-8">
+                                    <h6 class="before:content-[counter(numeric,decimal-leading-zero)'.'] mb-2"></h6>
+                                    <h4 class="font-title font-medium text-balance mb-8 after:content-['.'] after:text-primary-500 | lg:pr-[30%]">Decision Timeline</h4>
+                                </div>
+                                <article class="post-entry">
+                                    <ul>
+                                        <li><b>November 1</b>
+                                            <ul>
+                                                <li>Early Decision Application due</li>
+                                                <li>Financial Aid application materials due</li>
+                                                <li>Application Fee or Fee Waiver due</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Early November</b>
+                                            <ul>
+                                                <li>Last date for testing.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Mid November</b>
+                                            <ul>
+                                                <li>Respond to (optional) Alumni Interview invitation</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Late November</b>
+                                            <ul>
+                                                <li>Quarter grades/progress reports that include grades from the senior year due</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Mid December</b>
+                                            <ul>
+                                                <li>Early Decision admission notification. Financial aid tentative award notification for admitted financial aid applicants.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Late December</b>
+                                            <ul>
+                                                <li>Intent to enroll deadline</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>January to February</b>
+                                            <ul>
+                                                <li>Admission notification for Early Decision deferred applicants. Financial aid award notification for admitted financial aid applicants.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>On or before April 1</b>
+                                            <ul>
+                                                <li>Early Decision deferred applicants should submit a brief update regarding recent notable academic, extracurricular, and/or personal accomplishments; some applicants may wish to submit other material, such as new standardized exam scores and/or an additional letter of recommendation.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                    </div><!--tab-junior-->
+
+                    <div id="tab-senior" class="flex-col gap-8 hidden [&.is-active]:flex | lg:gap-16" data-tab-content aria-hidden="true">
+                        <div class="flex flex-col [counter-reset:numeric] divide-y divide-dark-950/30">
+                            <div class="relative py-8 [counter-increment:numeric]  first:pt-0 last:pb-0 | lg:py-16">
+                                <div class="mb-8">
+                                    <h6 class="before:content-[counter(numeric,decimal-leading-zero)'.'] mb-2"></h6>
+                                    <h4 class="font-title font-medium text-balance mb-8 after:content-['.'] after:text-primary-500 | lg:pr-[30%]">About Senior School</h4>
+                                </div>
+                                <article class="post-entry">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam assumenda ducimus aperiam eveniet deserunt temporibus modi sit consequuntur tenetur inventore numquam possimus earum ipsa rerum id quas, molestias veritatis enim distinctio consequatur. Soluta ratione cumque voluptatum doloribus esse illum. Dolorem, beatae sapiente!</p>
+                                    <p>Accusamus quos molestiae expedita eius voluptatum veniam adipisci sed optio alias, harum quaerat culpa ab atque maxime explicabo odio sit ipsam esse similique tenetur? Incidunt maiores velit nesciunt laudantium doloribus modi inventore commodi iure sit alias? Laborum odit culpa inventore dolorem reiciendis.</p>
+                                </article>
+                                <div class="grid gap-6 mt-8 | lg:grid-cols-2 lg:gap-y-8">
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Choose a School</label>
+                                            <select class="c-input js-select">
+                                                <option selected disabled></option>
+                                                <option>Primary School</option>
+                                                <option>Secondary School</option>
+                                            </select>
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Full Name <span class="opacity-50">(Parent)</span></label>
+                                            <input type="text" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Email Address</label>
+                                            <input type="email" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative py-8 [counter-increment:numeric]  first:pt-0 last:pb-0 | lg:py-16">
+                                <div class="mb-8">
+                                    <h6 class="before:content-[counter(numeric,decimal-leading-zero)'.'] mb-2"></h6>
+                                    <h4 class="font-title font-medium text-balance mb-8 after:content-['.'] after:text-primary-500 | lg:pr-[30%]">Bintang Mulia Admission Applications</h4>
+                                </div>
+                                <article class="post-entry">
+                                    <ul>
+                                        <li><b>August 1</b>
+                                            <ul>
+                                                <li>All candidates applying for first-year admission to Dartmouth must use the Common App. Add Dartmouth to the "My Colleges" section and you will be on your way. Check our Eligibility Guidelines to help guide what type of applicant you are.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </article>
+                                <div class="grid gap-6 mt-8 | lg:grid-cols-2 lg:gap-y-8">
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Phone <span class="opacity-50">(Optional)</span></label>
+                                            <input type="number" inputmode="numeric" class="c-input">
+                                            <!-- <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div> -->
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Password</label>
+                                            <input type="password" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item col-span-full | lg:col-span-1">
+                                        <div class="relative flex flex-col pt-2">
+                                            <label class="c-label c-fix-label">Confirm Password</label>
+                                            <input type="password" class="c-input">
+                                            <div class="text-xs text-dark-400 mt-2">Please fill out the form below</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative py-8 [counter-increment:numeric]  first:pt-0 last:pb-0 | lg:py-16">
+                                <div class="mb-8">
+                                    <h6 class="before:content-[counter(numeric,decimal-leading-zero)'.'] mb-2"></h6>
+                                    <h4 class="font-title font-medium text-balance mb-8 after:content-['.'] after:text-primary-500 | lg:pr-[30%]">Decision Timeline</h4>
+                                </div>
+                                <article class="post-entry">
+                                    <ul>
+                                        <li><b>November 1</b>
+                                            <ul>
+                                                <li>Early Decision Application due</li>
+                                                <li>Financial Aid application materials due</li>
+                                                <li>Application Fee or Fee Waiver due</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Early November</b>
+                                            <ul>
+                                                <li>Last date for testing.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Mid November</b>
+                                            <ul>
+                                                <li>Respond to (optional) Alumni Interview invitation</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Late November</b>
+                                            <ul>
+                                                <li>Quarter grades/progress reports that include grades from the senior year due</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Mid December</b>
+                                            <ul>
+                                                <li>Early Decision admission notification. Financial aid tentative award notification for admitted financial aid applicants.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Late December</b>
+                                            <ul>
+                                                <li>Intent to enroll deadline</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>January to February</b>
+                                            <ul>
+                                                <li>Admission notification for Early Decision deferred applicants. Financial aid award notification for admitted financial aid applicants.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>On or before April 1</b>
+                                            <ul>
+                                                <li>Early Decision deferred applicants should submit a brief update regarding recent notable academic, extracurricular, and/or personal accomplishments; some applicants may wish to submit other material, such as new standardized exam scores and/or an additional letter of recommendation.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                    </div><!--tab-senior-->
+
                 </div>
             </div>
         </div>
@@ -409,7 +935,8 @@
                     <h6 class="uppercase leading-none tracking-wide text-primary-500 mb-4 pb-4 border-b border-white/10">About Us</h6>
                     <ul class="flex flex-col gap-1 group/menu">
                         <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-us.html">About Us</a></li>
-                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-out-network.html">Our Network</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-our-network.html">Our Network</a></li>
+                        <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-structure.html">Structure Organization</a></li>
                         <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-about-gallery.html">Gallery</a></li>
                         <li class="inline-flex"><a class="link text-white group-hover/menu:text-white/50 hover:!text-white" href="page-news-event.html">News & Event</a></li>
                     </ul>

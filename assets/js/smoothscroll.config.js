@@ -39,11 +39,16 @@ document.querySelectorAll('#mobile-menu-toggle').forEach((mobileMenuToggle) => {
 
 function setupScrollAnchor() {
     document.querySelectorAll('[data-scroll-to]').forEach((scrollToEl) => {
-        const scrollToId = scrollToEl.getAttribute('data-scroll-to')
-        const targetElement = document.getElementById(scrollToId)
+        const scrollToId = scrollToEl.getAttribute('data-scroll-to');
+        const targetElement = document.getElementById(scrollToId);
+
+        const padding = document.querySelector('#section-header').clientHeight;
 
         scrollToEl.addEventListener('click', () => {
-            lenis.scrollTo(targetElement)
+            const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+            const adjustedPosition = targetPosition - padding;
+
+            lenis.scrollTo(adjustedPosition);
         })
     })
 }

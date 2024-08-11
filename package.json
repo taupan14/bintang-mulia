@@ -21,8 +21,10 @@
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5",
+    "lenis": "^1.1.9",
     "lightgallery": "^2.7.2",
     "split-type": "^0.3.4",
+    "tom-select": "^2.3.1",
     "ukiyojs": "^4.2.0"
   }
 }

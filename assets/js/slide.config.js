@@ -164,3 +164,36 @@ document.querySelectorAll('[data-slide-gallery]').forEach((slideEl) => {
     })
     slideGallery.mount({AutoScroll})
 })
+
+document.querySelectorAll('[data-slide-staff]').forEach((slideEl) => {
+    const slideStaff = new Splide(slideEl, {
+        perPage: 5,
+        gap: 16,
+        speed: 700,
+        easing: 'cubic-bezier(.135,.9,.15,1)',
+        arrows: false,
+        pagination: false,
+        breakpoints: {
+            640: {
+                focus: 'center',
+                perPage: 1.5,
+                gap: 12,
+            }
+        },
+    })
+    slideStaff.mount()
+
+    slideStaff.on('drag', handleDrag(slideStaff))
+    slideStaff.on('dragged', handleDragEnd(slideStaff))
+
+    slideStaff.Components.Elements.slides.forEach((slide) => {
+        slide.addEventListener('mousedown', handleDrag(slideStaff))
+        slide.addEventListener('mouseup', handleDragEnd(slideStaff))
+        slide.addEventListener('mouseleave', handleDragEnd(slideStaff))
+    })
+
+    let parent = slideEl;
+    while (parent.parentElement !== null) {
+        parent = parent.parentElement
+    }
+})

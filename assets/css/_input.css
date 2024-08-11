@@ -63,6 +63,82 @@
         focus:border-b-dark-900
     }
 
+    .js-select {
+        /* &.focus {
+            @apply
+            outline-2
+            outline-offset-[3px]
+            outline-primary-400;
+        } */
+
+        .ts-dropdown,
+        .ts-control,
+        .ts-control input {
+            @apply
+            text-dark-600
+            text-sm
+            leading-5
+            font-sans
+        }
+
+        .ts-control {
+            @apply
+            relative
+            border-none
+            p-0
+            rounded-none
+            !bg-transparent
+            leading-5
+            text-sm
+            font-medium;
+    
+            & > * {
+                @apply
+                inline-flex
+                font-medium
+            }
+        }
+
+        .ts-dropdown {
+            @apply
+            mx-0
+            my-2
+            border-none
+            shadow-[0_1.25rem_2.75rem]
+            shadow-dark-950/15
+            ring-1
+            ring-dark-950/10
+            rounded-3xl
+            overflow-clip;
+
+            .option,
+            .optgroup-header,
+            .no-results,
+            .create {
+                @apply
+                py-3
+                px-4
+            }
+
+            .active,
+            .selected {
+                @apply
+                bg-dark-950/5
+                text-dark-950
+            }
+
+            [aria-disabled] {
+                @apply
+                !opacity-100;
+
+                img {
+                    @apply
+                    grayscale
+                }
+            }
+        }
+    }
+
     textarea {
         @apply
         min-h-12

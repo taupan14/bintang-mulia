@@ -197,3 +197,53 @@ document.querySelectorAll('[data-slide-staff]').forEach((slideEl) => {
         parent = parent.parentElement
     }
 })
+
+document.querySelectorAll('[data-slide-quotes]').forEach((slideEl) => {
+    const slideQuoteImg = slideEl.querySelector('[data-slide-quote-img]')
+    const slideQuoteText = slideEl.querySelector('[data-slide-quote-text]')
+
+    const slideThumbnail = new Splide(slideQuoteImg, {
+        type: 'loop',
+        focus: 'center',
+        // trimSpace: false,
+        perPage: 5,
+        speed: 700,
+        easing: 'cubic-bezier(.135,.9,.15,1)',
+        arrows: false,
+        pagination: false,
+        isNavigation: true,
+        breakpoints: {
+            640: {
+                focus: 'center',
+                perPage: 1.5,
+                gap: 12,
+            }
+        },
+    }).mount()
+    const updateActiveSlideClass = (newIndex) => {
+        slideThumbnail.Components.Elements.slides.forEach((slide) => {
+            slide.classList.remove('active-slide')
+        })
+
+        const currentSlide = slideThumbnail.Components.Elements.slides[newIndex]
+        currentSlide.classList.add('active-slide')
+    }
+    updateActiveSlideClass(slideThumbnail.index);
+    slideThumbnail.on('move', (newIndex) => {
+        updateActiveSlideClass(newIndex)
+    })
+    
+    const slideMain = new Splide(slideQuoteText, {
+        type: 'loop',
+        speed: 700,
+        easing: 'cubic-bezier(.135,.9,.15,1)',
+        arrows: false,
+        pagination: false,
+        // autoplay: true,
+        // interval: 5000,
+        autoHeight: true,
+    }).mount()
+
+
+    slideMain.sync(slideThumbnail)
+})

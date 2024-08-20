@@ -653,6 +653,38 @@ function setupImageFollow() {
 
 
 
+function setupFloatingBtn() {
+    gsap.set('#floating-btn', {
+        yPercent: 0
+    })
+
+    gsap.to('#floating-btn', {
+        yPercent: 0,
+        duration: '0.5',
+        ease: 'power3',
+        scrollTrigger: {
+            trigger: 'body',
+            start: 'top -=10%',
+            toggleActions: 'play none none reverse'
+        }
+    })
+
+    ScrollTrigger.create({
+        trigger: '#footer-bottom',
+        endTrigger: 'body',
+        end: 'bottom 20%',
+        onToggle: self => {
+            gsap.to('#floating-btn', {
+                yPercent: self.isActive ? 100 : 0,
+                duration: 0.5,
+                ease: 'power3'
+            })
+        }
+    })
+}
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.documentElement.classList.add('is-load')
@@ -680,6 +712,7 @@ window.addEventListener('DOMContentLoaded', () => {
         setupInput()
         setupAccordion()
         setupImageFollow()
+        setupFloatingBtn()
         
     }, 500)
 })

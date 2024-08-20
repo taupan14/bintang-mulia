@@ -235,6 +235,12 @@
         text-primary-600
     }
 
+    .btn-danger {
+        @apply
+        bg-danger-600
+        text-white
+    }
+
     .group {
         &:hover {
             .btn-circle {
